@@ -38,7 +38,7 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
   </i>
 </p>
 
-## [VHDL](/VHDL/)
+## [VHDL](/VHDL Files)
 ### VHDL Code
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
