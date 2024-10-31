@@ -11,7 +11,7 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
 
 ## Software utilizado
 <p align="center">
-<img src="FAOB_Img/Quartus.JPG" alt="QuartusPrime" width="200"/>  
+<img src="FAOB_Img/Quartus.jpg" alt="QuartusPrime" width="200"/>  
 </p>
 <p>
     <b>  
