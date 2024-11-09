@@ -27,6 +27,10 @@ always @ (e1, e2, e3, Cin_0)
 
 //************* Compact description of Adder ****************--
 //***********************************************************--
+// For the compact descriptions the outputs of the module
+// must be of "net" type, thus it is reflected in the code
+// changing the outputs Type.
+
 //module FAOB
 // (	input A_0,B_0,Cin_0,
 //	output Q_0, Cout_0
