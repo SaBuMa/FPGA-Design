@@ -39,9 +39,4 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
 </p>
 
 ## [VHDL](VHDL_Files)
-
-
-## Verilog
-## [Git_Images](/Git_Images/)
-## Verilog Code
-## Verilog RTL
+## [Verilog](Verilog_Files)
