@@ -1,4 +1,5 @@
-### VHDL Code
+# VHDL
+## VHDL Code
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --******************* LIBRARY DEFINITION ********************--
@@ -43,7 +44,7 @@ e3 <= e1 AND Cin;
 END ARCHITECTURE behavioral;
 ```
 
-### VHDL RTL
+## VHDL RTL
 This first image represent the Full Adder One Bit in a Gate Level description
 <p align="center">
 <img src="../FAOB_Img/RTL_GateLevel.png" alt="RTL GateLevel" width="500" border= 2px black;/>
