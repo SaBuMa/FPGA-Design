@@ -46,7 +46,7 @@ END ARCHITECTURE behavioral;
 ### VHDL RTL
 This first image represent the Full Adder One Bit in a Gate Level description
 <p align="center">
-<img src="FAOB_Img/RTL_GateLevel.png" alt="QuartusPrime" width="500" border= 2px black;/>
+<img src="../FAOB_Img/RTL_GateLevel.png" alt="RTL GateLevel" width="500" border= 2px black;/>
 </p>
 <p align="center">
     <b>
@@ -56,7 +56,7 @@ This first image represent the Full Adder One Bit in a Gate Level description
 
 Now using the library "***USE IEEE.STD_LOGIC_UNSIGNED.ALL;***" one can describe de Full Adder in a compact way, as seen in the next image.
 <p align="center">
-<img src="FAOB_Img/RTL_SIMPLIFIED.png" alt="QuartusPrime" width="500" border= 2px black;/>  
+<img src="../FAOB_Img/RTL_SIMPLIFIED.png" alt="RTL Siplified" width="500" border= 2px black;/>  
 </p>
 <p align="center">
     <b>
