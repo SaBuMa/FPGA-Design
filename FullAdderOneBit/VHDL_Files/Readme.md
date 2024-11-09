@@ -6,7 +6,7 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL; -- Used to implement the adder
-								 -- In a compact description
+				 -- In a compact description
 
 --***************** ENITY = Inputs Outputs ******************--
 --***********************************************************--
@@ -23,7 +23,7 @@ ARCHITECTURE behavioral OF FAOB IS
 
 --**** Auxiliary cables ****--
 	SIGNAL e0, e1, e2, e3	: STD_LOGIC;
---	SIGNAL aux		 			: STD_LOGIC_VECTOR(1 downto 0);
+--	SIGNAL aux		: STD_LOGIC_VECTOR(1 downto 0);
 
 BEGIN
 
