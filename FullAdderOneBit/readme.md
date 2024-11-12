@@ -42,7 +42,7 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
   </i>
 </p>
 <p align="center">
-<img src="FAOB_Img/Quartus.JPG" alt="QuartusPrime" width="300"/> 
+<img src="FAOB_Img/Quartus.jpg" alt="QuartusPrime" width="300"/> 
 <img src="FAOB_Img/Questa.png" alt="Questa" width="170"/>  
 </p>
 
