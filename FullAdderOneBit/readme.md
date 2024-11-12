@@ -74,10 +74,10 @@ the pins that are hard-wire from the **ALTERA MAX 10 FPGA** to the **Switches** 
 <img src="FAOB_Img/Switches_pag27.png" alt="UserManual" width="250"border= 2px black;/>    
 </p>
 
-Finally after determining the pins for the Switches and LEDs, proceed to 
-choose the Switches SW2, SW1, SW0 (PIN_D12, PIN_C11 and PIN_C10 respectively)
-for the Inputs A_0, B_0 and Cin_0 respectively. Then for the LEDs choose
-LEDR1 and LEDR0 (PIN_A9 and PIN_A8) fro the Outputs Q_0 and Cout_0 respectively.
+Finally after determining the pins for the Switches and LEDs, proceed to choose the Switches SW2, SW1, SW0 (PIN_D12, PIN_C11 and PIN_C10 respectively) for the Inputs A_0, B_0 and Cin_0 respectively. 
+
+Then for the LEDs choose LEDR1 and LEDR0 (PIN_A9 and PIN_A8) fro the Outputs Q_0 and Cout_0 respectively.
+
 The Pin Planner configuration is shown below
 
 <p align="center">
