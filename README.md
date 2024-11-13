@@ -3,7 +3,9 @@ This repository gathers basic knowledge of how to build circuits using **VHDL** 
 The circuits implemented are:
 ## [Full adder 1 Bit](FullAdderOneBit)
 <p align="Center">
+<a href="FullAdderOneBit">
 <img src="FullAdderOneBit/FAOB_Img/FullAdderOneBit.png" alt="FAOB" width="350" /> 
+</a>
 </p>
 
 ## Full adder N bits (4 Bits)
