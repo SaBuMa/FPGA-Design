@@ -153,9 +153,9 @@ END ARCHITECTURE behavioral;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
-This first image represent the Full Adder One Bit in a Gate Level description
+This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
-<img src="../FAOB_Img/RTL_GateLevel.png" alt="RTL GateLevel" width="500" border= 2px black;/>
+<img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation"/>
 </p>
 <p align="center">
     <b>
@@ -163,9 +163,19 @@ This first image represent the Full Adder One Bit in a Gate Level description
     </b>
 </p>
 
-Now using the library "***USE IEEE.STD_LOGIC_UNSIGNED.ALL;***" one can describe de Full Adder in a compact way, as seen in the next image.
+This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
-<img src="../FAOB_Img/RTL_SIMPLIFIED.png" alt="RTL Siplified" width="500" border= 2px black;/>  
+<img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate"/>
+</p>
+<p align="center">
+    <b>
+       RTL Gate Level
+    </b>
+</p>
+
+Finally describing the Full Adder in a compact way
+<p align="center">
+<img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact"/>  
 </p>
 <p align="center">
     <b>
