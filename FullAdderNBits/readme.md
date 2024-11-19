@@ -5,7 +5,9 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
 
 ## Block Diagram and Truth Table
 <p align="Center">
-<img src="FANB_Img/FullAdderNBits.png" alt="Block"/>  
+<kbd>
+<img src="FANB_Img/FullAdderNBits.png" alt="Block"/> 
+</kbd>
 </p>
 
 ## Hardware used
@@ -155,7 +157,9 @@ END ARCHITECTURE behavioral;
 ### VHDL RTL
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation"/>
+</kbd>
 </p>
 <p align="center">
     <b>
@@ -165,7 +169,9 @@ END ARCHITECTURE behavioral;
 
 **2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate"/>
+</kbd>
 </p>
 <p align="center">
     <b>
@@ -175,7 +181,9 @@ END ARCHITECTURE behavioral;
 
 **3.** Finally describing the Full Adder in a compact way
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact"/>  
+</kbd>
 </p>
 <p align="center">
     <b>
@@ -247,9 +255,11 @@ assign Cout = aux[Nbits];
 endmodule  
 ```
 ## Verilog RTL
-1. This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
+**1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation"/>
+</kbd>
 </p>
 <p align="center">
     <b>
@@ -257,9 +267,11 @@ endmodule
     </b>
 </p>
 
-2. This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
+**2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate"/>
+</kbd>
 </p>
 <p align="center">
     <b>
@@ -267,9 +279,11 @@ endmodule
     </b>
 </p>
 
-3. Finally describing the Full Adder in a compact way
+**3.** Finally describing the Full Adder in a compact way
 <p align="center">
+<kbd>
 <img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact"/>  
+</kbd>
 </p>
 <p align="center">
     <b>
