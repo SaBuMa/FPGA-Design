@@ -153,27 +153,27 @@ END ARCHITECTURE behavioral;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
-This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
+**1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
 <img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation"/>
 </p>
 <p align="center">
     <b>
-       RTL Gate Level
+       RTL Gate Level Instantiation
     </b>
 </p>
 
-This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
+**2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
 <img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate"/>
 </p>
 <p align="center">
     <b>
-       RTL Gate Level
+       RTL Gate Level Generate Block
     </b>
 </p>
 
-Finally describing the Full Adder in a compact way
+**3.** Finally describing the Full Adder in a compact way
 <p align="center">
 <img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact"/>  
 </p>
@@ -247,25 +247,36 @@ assign Cout = aux[Nbits];
 endmodule  
 ```
 ## Verilog RTL
-This first image represent the Full Adder One Bit in a Gate Level description
+1. This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
-<img src="../FAOB_Img/RTL_GateLevel_Verilog.png" alt="RTL GateLevel Verilog" width="500" border= 2px black;/>
+<img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation"/>
 </p>
 <p align="center">
     <b>
-       RTL Gate Level
+       RTL Gate Level Instantiation
     </b>
 </p>
 
-Now using describing the **"Full Adder One Bit"** in a compact way using Verilog, the next image is the output RTL.
+2. This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
-<img src="../FAOB_Img/RTL_SIMPLIFIED_Verilog.png" alt="RTL Siplified Verilog" width="500" border= 2px black;/>  
+<img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate"/>
+</p>
+<p align="center">
+    <b>
+       RTL Gate Level Generate Block
+    </b>
+</p>
+
+3. Finally describing the Full Adder in a compact way
+<p align="center">
+<img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact"/>  
 </p>
 <p align="center">
     <b>
        RTL Compact Description
     </b>
 </p>
+
 
 ## Board Configuration
 ### Pin assignment
