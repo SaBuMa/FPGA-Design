@@ -63,8 +63,8 @@ ENTITY FANB IS
 	GENERIC	(	Nbits			:	INTEGER := 4);
 	PORT 	(		A_N			:	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
 					B_N			: 	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
-					Cin_N			: 	in 	STD_LOGIC;
-					Cout_N		: 	out 	STD_LOGIC;
+					Cin			: 	in 	STD_LOGIC;
+					Cout			: 	out 	STD_LOGIC;
 					Q_N			: 	out 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0)
 				);
 END ENTITY FANB;
@@ -74,77 +74,80 @@ END ENTITY FANB;
 
 ARCHITECTURE behavioral OF FANB IS
 
-	--**** Auxiliary cables ****--
-	SIGNAL e0, e1, e2, e3	: STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
+--******************* Auxiliary cables **********************--
+--***********************************************************--
+
 	SIGNAL Co					: STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
-	SIGNAL Aux					: STD_LOGIC_VECTOR(Nbits downto 0);
+	SIGNAL aux					: STD_LOGIC_VECTOR(Nbits downto 0);
 
 BEGIN
---*********** Ussing module instantiations 1by1 *************-- 
+--***************** Module Instantiation ********************--
 --***********************************************************--
-FullAdderOneBit_0: ENTITY work.FAOB
-	PORT MAP(	
-				A_0 				=> A_N(0),
-				B_0				=> B_N(0),
-				Cin				=> Cin_N,
-				Cout 				=> Co(0),
-				Q_0 				=> Q_N(0)
-	);
-	
-FullAdderOneBit_1: ENTITY work.FAOB
-	PORT MAP(
-				A_0 				=> A_N(1),
-				B_0 				=> B_N(1),
-				Cin				=> Co(0),
-				Cout			 	=> Co(1),
-				Q_0 				=> Q_N(1)
-	);
-	
-FullAdderOneBit_2: ENTITY work.FAOB
-	PORT MAP(
-				A_0 				=> A_N(2),
-				B_0 				=> B_N(2),
-				Cin 				=> Co(1),
-				Cout 				=> Co(2),
-				Q_0 				=> Q_N(2)
-	);
-	
-FullAdderOneBit_3: ENTITY work.FAOB
-	PORT MAP(
-				A_0 				=> A_N(3),
-				B_0 				=> B_N(3),
-				Cin  				=> Co(2),
-				Cout 				=> Cout_N,
-				Q_0 				=> Q_N(3)
-	);
 
---***** Ussing Generate for many adders instantiations ******-- 
+--FullAdderOneBit_0: ENTITY work.FAOB
+--	PORT MAP(	
+--				A_in 				=> A_N(0),
+--				B_in				=> B_N(0),
+--				C_in				=> Cin,
+--				C_out 				=> Co(0),
+--				Q_out 				=> Q_N(0)
+--	);
+--	
+--FullAdderOneBit_1: ENTITY work.FAOB
+--	PORT MAP(
+--				A_in 				=> A_N(1),
+--				B_in 				=> B_N(1),
+--				C_in				=> Co(0),
+--				C_out			 	=> Co(1),
+--				Q_out 				=> Q_N(1)
+--	);
+--	
+--FullAdderOneBit_2: ENTITY work.FAOB
+--	PORT MAP(
+--				A_in 				=> A_N(2),
+--				B_in 				=> B_N(2),
+--				C_in 				=> Co(1),
+--				C_out 				=> Co(2),
+--				Q_out 				=> Q_N(2)
+--	);
+--	
+--FullAdderOneBit_3: ENTITY work.FAOB
+--	PORT MAP(
+--				A_in 				=> A_N(3),
+--				B_in 				=> B_N(3),
+--				C_in  				=> Co(2),
+--				C_out 				=> Cout,
+--				Q_out 				=> Q_N(3)
+--	);
+
+--******************** Generte Module ***********************--
 --***********************************************************--
---
---Aux(0) <= Cin_N; -- Assigning the Cin to the first bit of the
---					  -- Auxiliary cable
+
+---- First assign the Carry in to the auxiliary cable [0]
+--aux(0) <= Cin; 
 --
 ---- Designing the generate function for each adder
 --
 --Gen_proc : for i in 0 to (Nbits-1) generate
 --FullAdderOneBit: ENTITY work.FAOB
 --	PORT MAP(
---				A_0 				=> A_N(i),
---				B_0 				=> B_N(i),
---				Cin  				=> Aux(i),
---				Cout 				=> Aux(i+1),
---				Q_0 				=> Q_N(i)
+--				A_in 				=> A_N(i),
+--				B_in 				=> B_N(i),
+--				C_in  			=> aux(i),
+--				C_out 			=> aux(i+1),
+--				Q_out 				=> Q_N(i)
 --	);
 --  end generate Gen_proc;
 --
 -- -- Assigning the last bit of the Auxiliary Cable to the Cout_N
---Cout_N <= Aux(Nbits);
+--Cout <= aux(Nbits);
 	
---*************** Compact description of Adder **************-- 
+--****************** Compact Description ********************--
 --***********************************************************--
---  Aux 		<= ('0' & A_N) + ('0' & B_N) + Cin_N;
---  Q_N     	<= Aux (Nbits-1 downto 0); 	-- Nbits-1 bits
---  Cout_N    <= Aux (Nbits);          		-- Nbits-1 bit
+
+  aux 		<= ('0' & A_N) + ('0' & B_N) + Cin;
+  Q_N     <= aux (Nbits-1 downto 0); 	-- Nbits-1 bits
+  Cout    <= aux (Nbits);          		-- Nbits bit
 	
 END ARCHITECTURE behavioral;
 ```
@@ -173,44 +176,65 @@ Now using the library "***USE IEEE.STD_LOGIC_UNSIGNED.ALL;***" one can describe 
 ## [Verilog](Verilog_Files)
 ## Verilog Code
 ```
-//******************* Full Adder One Bit ********************--
+//******************* Full Adder N BitS *********************--
 //***********************************************************--
 
 //**************** module = Inputs Outputs ******************--
 //***********************************************************--
-module FAOB
- (	input A_0,B_0,Cin_0,
-    output reg Q_0, Cout_0
- );
-
+module FANB                	
+#(parameter Nbits = 4) // #Nbits Choose your flavor
+(
+		input [(Nbits-1):0] A_N, B_N, 
+		input Cin, 
+		output Cout,		
+		output [(Nbits-1):0] Qout_N
+		
+);
 //******************* Auxiliary cables **********************--
 //***********************************************************--
-wire e1,e2,e3;
 
-assign e1 = A_0 ^ B_0;
-assign e2 = A_0 & B_0;
-assign e3 = e1 & Cin_0;
+wire [2:0]co;			// Used in Module Instantiation
+wire [Nbits:0] aux;	// Used in Generate Module
 
-always @ (e1, e2, e3, Cin_0)
-    begin
-     Q_0 = e1 ^ Cin_0;
-     Cout_0 = e3 | e2;
-    end
-
-//************* Compact description of Adder ****************--
+//***************** Module Instantiation ********************--
 //***********************************************************--
-// For the compact descriptions the outputs of the module
-// must be of "net" type, thus it is reflected in the code
-// changing the outputs Type.
 
-//module FAOB
-// (	input A_0,B_0,Cin_0,
-//	output Q_0, Cout_0
-// );
-// 
-//assign {Cout_0, Q_0} = A_0 + B_0 + Cin_0;
+// Instantiating each of the Full Adders needed and 
+// Using wires (co) to interconnect Carry in with Carry out between modules
 
-endmodule 
+//FAOB faob0(.A_in(A_N[0]), .B_in(B_N[0]),.C_in(Cin),.Q_out(Qout_N[0]),.C_out(co[0]));
+//FAOB faob1(.A_in(A_N[1]), .B_in(B_N[1]),.C_in(co[0]),.Q_out(Qout_N[1]),.C_out(co[1]));
+//FAOB faob2(.A_in(A_N[2]), .B_in(B_N[2]),.C_in(co[1]),.Q_out(Qout_N[2]),.C_out(co[2]));
+//FAOB faob3(.A_in(A_N[3]), .B_in(B_N[3]),.C_in(co[2]),.Q_out(Qout_N[3]),.C_out(Cout));
+
+//******************** Generte Module ***********************--
+//***********************************************************--
+
+// First assign the Carry in to the auxiliary cable [0]
+assign aux[0] = Cin;
+
+// Generate Block
+generate
+	genvar i; 
+	for (i=0; i< Nbits; i=i+1)
+	begin: N_bit_Modules // It is necessary to give a name to the generate module/instance
+		FAOB faob(	.A_in(A_N[i]),
+						.B_in(B_N[i]),
+						.C_in(aux[i]),
+						.C_out(aux[i+1]), // This "i+1" is done so that each Cin recieve a Cout
+						.Q_out(Qout_N[i])
+					 );
+	end
+endgenerate
+
+assign Cout = aux[Nbits];
+
+//****************** Compact Description ********************--
+//***********************************************************--
+//
+//assign {Qout_N, Cout} = A_N + B_N + Cin;
+
+endmodule  
 ```
 ## Verilog RTL
 This first image represent the Full Adder One Bit in a Gate Level description
