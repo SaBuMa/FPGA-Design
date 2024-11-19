@@ -9,6 +9,12 @@ The circuits implemented are:
 </p>
 
 ## Full adder N bits (4 Bits)
+<p align="Center">
+<a href="FullAdderNBits/readme.md">
+<img src="FullAdderNBits/FANB_Img/FullAdderNBits.png" alt="FANB"/> 
+</a>
+</p>
+
 ## Comparator
 ## Majority vote
 ## Binary Counter
