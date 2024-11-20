@@ -16,8 +16,8 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
     </b>
 </p>
 <p align="center">
-<img src="FAOB_Img/FPGA1.JPG" alt="FPGA BOX" width="300"/> 
-<img src="FAOB_Img/FPGA2.JPG" alt="FPGA Board" width="300"/> 
+<img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="300"/> 
+<img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="300"/> 
 </p>
 
 ## Software used
@@ -42,8 +42,8 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
   </i>
 </p>
 <p align="center">
-<img src="FAOB_Img/Quartus.jpg" alt="QuartusPrime" width="300"/> 
-<img src="FAOB_Img/Questa.png" alt="Questa" width="170"/>  
+<img src="../FPGA_PrjImg/Quartus.jpg" alt="QuartusPrime" width="300"/> 
+<img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
 </p>
 
 ## [VHDL](VHDL_Files)
