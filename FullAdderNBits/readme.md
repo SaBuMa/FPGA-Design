@@ -302,8 +302,8 @@ To represent the Outputs of the Full Adder circuit, the red **LEDs**
 also present in the board are going to be used.
 
 <p align="center">
-<img src="FAOB_Img/Switches.png" alt="Switches" width="300"/>  
-<img src="FAOB_Img/LEDs.png" alt="LEDs" width="283"/>  
+<img src="FANB_Img/Switches.png" alt="Switches" width="300"/>  
+<img src="FANB_Img/LEDs.png" alt="LEDs" width="283"/>  
 </p>
 
 To proceed with the assignment of the **Switches** and **LEDs** to the Inputs and
@@ -316,31 +316,34 @@ the pins that are hard-wire from the **ALTERA MAX 10 FPGA** to the **Switches** 
 (The User Manual is shown below )
 
 <p align="center">
-<img src="FAOB_Img/LEDs_pag28.png" alt="UserManual" width="250"border= 2px black;/>    
-<img src="FAOB_Img/Switches_pag27.png" alt="UserManual" width="250"border= 2px black;/>    
+<kbd>
+<img src="FANB_Img/LEDs_pag28.png" alt="UserManual" width="250"/>    
+<img src="FANB_Img/Switches_pag27.png" alt="UserManual" width="250"/>
+</kbd>    
 </p>
 
-Now, for the next stage, proceed to choose the Switches **SW2, SW1, SW0** ( *PIN_D12, PIN_C11 and PIN_C10* ) for the Inputs **A_0, B_0 and Cin_0** respectively. Then for the LEDs choose **LEDR1 and LEDR0** ( *PIN_A9 and PIN_A8* ) for the Outputs **Q_0 and Cout_0** respectively.
+Now, for the next stage, proceed to choose:
+* The Switches **SW8 to SW5** for Inputs **A_N**, Switches **SW4 to SW1** for Inputs **B_N**, and Switche **SW0**for Input **Cin**.  
 
-This pins are declared in the Pin PLanner of Quartus:  
-Assignments-->Pin Planner
+* Then for the LEDs choose **LEDR4 to LEDR1** for Output **Q_N** and LED **LEDR0** for Output **Cout**.
 
-Then after assigning the Pin to the Inputs and Outputs, perform "I/O Assignment Analysis" to check for error in the assignments. And for the last step perform a Full compilation of all the circuit before uploading it to the board. 
-
+These pins are declared in the Pin PLanner of Quartus:  
+***Assignments-->Pin Planner***  
 The Pin Planner configuration is shown below
 
 <p align="center">
-<img src="FAOB_Img/PinPlanner.png" alt="PinPlanner" width="350"border= 2px black;/>    
+<kbd>
+<img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="450"/> 
+</kbd>   
 </p>
-<p align="center">
-<img src="FAOB_Img/PinPlanner_Zoom.png" alt="PinPlanner_Zoom" width="600"border= 2px black;/>  
-</p>
+
+After assigning the Pins for the Inputs and Outputs, perform ***"I/O Assignment Analysis"*** to check for error in the assignments. For the last step perform a Full compilation of all the circuit before uploading it to the board. 
 
 ## Board Testing
-After doing all the preparation work describe before, go to:
-Tools-->Programmer. To program the Development Board with the .sof file that has been created inside the root folder of the project.
+After doing all the preparation work described before, go to:
+***Tools-->Programmer***.  
+To program the Development Board with the **.sof** file that has been created inside the root folder of the project.
 
 <p align="center">
-<img src="FAOB_Img/FAOB_gif.gif" alt="Working .gif" width="500">
+<img src="FANB_Img/FPGAWorking.gif" alt="Working .gif" width="500">
 </p>
-
