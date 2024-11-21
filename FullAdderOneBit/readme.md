@@ -103,7 +103,7 @@ END ARCHITECTURE behavioral;
 This first image represent the Full Adder One Bit in a Gate Level description
 <p align="center">
 <kbd>
-<img src="../FAOB_Img/FAOB_VHDL_GateLevel.png" alt="VHDL_GateLevel" width="500"/>
+<img src="FAOB_Img/FAOB_VHDL_GateLevel.png" alt="VHDL_GateLevel" width="500"/>
 </kbd>
 </p>
 <p align="center">
@@ -115,7 +115,7 @@ This first image represent the Full Adder One Bit in a Gate Level description
 Now using the library "***USE IEEE.STD_LOGIC_UNSIGNED.ALL;***" one can describe de Full Adder in a compact way, as seen in the next image.
 <p align="center">
 <kbd>
-<img src="../FAOB_Img/FAOB_VHDL_Compact.png" alt="VHDL_Compact" width="500"/>  
+<img src="FAOB_Img/FAOB_VHDL_Compact.png" alt="VHDL_Compact" width="500"/>  
 </kbd>
 </p>
 <p align="center">
@@ -176,7 +176,7 @@ endmodule
 This first image represent the Full Adder One Bit in a Gate Level description
 <p align="center">
 <kbd>
-<img src="../FAOB_Img/FAOB_Verilog_GateLevel.png" alt="Verilog_GateLevel" width="500"/>
+<img src="FAOB_Img/FAOB_Verilog_GateLevel.png" alt="Verilog_GateLevel" width="500"/>
 </kbd>
 </p>
 <p align="center">
@@ -187,8 +187,11 @@ This first image represent the Full Adder One Bit in a Gate Level description
 
 Now using describing the **"Full Adder One Bit"** in a compact way using Verilog, the next image is the output RTL.
 <p align="center">
-<img src="../FAOB_Img/FAOB_Verilog_Compact.png" alt="Verilog_Compact" width="500"/>  
+<kbd>
+<img src="FAOB_Img/FAOB_Verilog_Compact.png" alt="Verilog_Compact" width="500"/>  
+</kbd>  
 </p>
+
 <p align="center">
     <b>
        Verilog Compact
