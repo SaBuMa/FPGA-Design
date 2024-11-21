@@ -1,12 +1,10 @@
 # Full Adder N Bit Cascaded
-For this scenario, a **Full Adder** is being implemented using **logic gates**. Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog**.
-
-Furthermore, using Quartus one can check that the VHDL or Verilog code implement does in fact recreate the circuit in question.
+For this scenario, an **N Bit Full Adder** is being implemented using **logic gates**, **"instantiation"** and the **"Generate Block"**. Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog** languages. With the use of Quartus one can check the VHDL or Verilog code implementation does in fact recreate the circuit in question looking at the **RTL model** created by Quartus.
 
 ## Block Diagram and Truth Table
 <p align="Center">
 <kbd>
-<img src="FANB_Img/FullAdderNBits.png" alt="Block"/> 
+<img src="FANB_Img/FullAdderNBits.png" alt="Block" width="750"/> 
 </kbd>
 </p>
 
@@ -43,8 +41,12 @@ Furthermore, using Quartus one can check that the VHDL or Verilog code implement
   </i>
 </p>
 <p align="center">
+<kbd>
 <img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="300"/> 
+</kbd>
+<kbd>
 <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
+</kbd>
 </p>
 
 
@@ -57,18 +59,18 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL; -- Used to implement the adder
-											-- In a compact description
+				 -- In a compact description
 
 --***************** ENTITY = Inputs Outputs ******************--
 --***********************************************************--
 ENTITY FANB IS
-	GENERIC	(	Nbits			:	INTEGER := 4);
-	PORT 	(		A_N			:	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
-					B_N			: 	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
-					Cin			: 	in 	STD_LOGIC;
-					Cout			: 	out 	STD_LOGIC;
-					Q_N			: 	out 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0)
-				);
+GENERIC	(Nbits			:	INTEGER := 4);
+PORT 	(A_N			:	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
+	 B_N			: 	in 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
+	 Cin			: 	in 	STD_LOGIC;
+	 Cout			: 	out 	STD_LOGIC;
+	 Q_N			: 	out 	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0)
+	);
 END ENTITY FANB;
 
 --************ INTERCONNECTION BETWEEN SIGNALS **************--
@@ -79,8 +81,8 @@ ARCHITECTURE behavioral OF FANB IS
 --******************* Auxiliary cables **********************--
 --***********************************************************--
 
-	SIGNAL Co					: STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
-	SIGNAL aux					: STD_LOGIC_VECTOR(Nbits downto 0);
+	SIGNAL Co	: STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
+	SIGNAL aux	: STD_LOGIC_VECTOR(Nbits downto 0);
 
 BEGIN
 --***************** Module Instantiation ********************--
@@ -88,68 +90,68 @@ BEGIN
 
 --FullAdderOneBit_0: ENTITY work.FAOB
 --	PORT MAP(	
---				A_in 				=> A_N(0),
---				B_in				=> B_N(0),
---				C_in				=> Cin,
---				C_out 				=> Co(0),
---				Q_out 				=> Q_N(0)
+--			A_in 	=> A_N(0),
+--			B_in	=> B_N(0),
+--			C_in	=> Cin,
+--			C_out 	=> Co(0),
+--			Q_out 	=> Q_N(0)
 --	);
 --	
 --FullAdderOneBit_1: ENTITY work.FAOB
 --	PORT MAP(
---				A_in 				=> A_N(1),
---				B_in 				=> B_N(1),
---				C_in				=> Co(0),
---				C_out			 	=> Co(1),
---				Q_out 				=> Q_N(1)
+--			A_in 	=> A_N(1),
+--			B_in 	=> B_N(1),
+--			C_in	=> Co(0),
+--			C_out	=> Co(1),
+--			Q_out 	=> Q_N(1)
 --	);
 --	
 --FullAdderOneBit_2: ENTITY work.FAOB
 --	PORT MAP(
---				A_in 				=> A_N(2),
---				B_in 				=> B_N(2),
---				C_in 				=> Co(1),
---				C_out 				=> Co(2),
---				Q_out 				=> Q_N(2)
+--			A_in 	=> A_N(2),
+--			B_in 	=> B_N(2),
+--			C_in 	=> Co(1),
+--			C_out 	=> Co(2),
+--			Q_out 	=> Q_N(2)
 --	);
 --	
 --FullAdderOneBit_3: ENTITY work.FAOB
 --	PORT MAP(
---				A_in 				=> A_N(3),
---				B_in 				=> B_N(3),
---				C_in  				=> Co(2),
---				C_out 				=> Cout,
---				Q_out 				=> Q_N(3)
+--			A_in 	=> A_N(3),
+--			B_in 	=> B_N(3),
+--			C_in  	=> Co(2),
+--			C_out 	=> Cout,
+--			Q_out 	=> Q_N(3)
 --	);
 
---******************** Generte Module ***********************--
+--******************** Generate Module ***********************--
 --***********************************************************--
 
----- First assign the Carry in to the auxiliary cable [0]
---aux(0) <= Cin; 
---
----- Designing the generate function for each adder
---
---Gen_proc : for i in 0 to (Nbits-1) generate
---FullAdderOneBit: ENTITY work.FAOB
---	PORT MAP(
---				A_in 				=> A_N(i),
---				B_in 				=> B_N(i),
---				C_in  			=> aux(i),
---				C_out 			=> aux(i+1),
---				Q_out 				=> Q_N(i)
---	);
---  end generate Gen_proc;
---
--- -- Assigning the last bit of the Auxiliary Cable to the Cout_N
---Cout <= aux(Nbits);
+-- First assign the Carry in to the auxiliary cable [0]
+aux(0) <= Cin; 
+
+-- Designing the generate function for each adder
+
+Gen_proc : for i in 0 to (Nbits-1) generate
+FullAdderOneBit: ENTITY work.FAOB
+	PORT MAP(
+			A_in 	=> A_N(i),
+			B_in 	=> B_N(i),
+			C_in  	=> aux(i),
+			C_out 	=> aux(i+1),
+			Q_out 	=> Q_N(i)
+	);
+  end generate Gen_proc;
+
+ -- Assigning the last bit of the Auxiliary Cable to the Cout_N
+Cout <= aux(Nbits);
 	
 --****************** Compact Description ********************--
 --***********************************************************--
 
-  aux 		<= ('0' & A_N) + ('0' & B_N) + Cin;
-  Q_N     <= aux (Nbits-1 downto 0); 	-- Nbits-1 bits
-  Cout    <= aux (Nbits);          		-- Nbits bit
+--  aux 	<= ('0' & A_N) + ('0' & B_N) + Cin;
+--  Q_N		<= aux (Nbits-1 downto 0); 	-- Nbits-1 bits
+--  Cout	<= aux (Nbits);          	-- Nbits bit
 	
 END ARCHITECTURE behavioral;
 ```
@@ -158,7 +160,7 @@ END ARCHITECTURE behavioral;
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation"/>
+<img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation" width="550"/>
 </kbd>
 </p>
 <p align="center">
@@ -170,7 +172,7 @@ END ARCHITECTURE behavioral;
 **2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate"/>
+<img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate" width="550"/>
 </kbd>
 </p>
 <p align="center">
@@ -182,7 +184,7 @@ END ARCHITECTURE behavioral;
 **3.** Finally describing the Full Adder in a compact way
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact"/>  
+<img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact" width="550"/>  
 </kbd>
 </p>
 <p align="center">
@@ -237,10 +239,10 @@ generate
 	for (i=0; i< Nbits; i=i+1)
 	begin: N_bit_Modules // It is necessary to give a name to the generate module/instance
 		FAOB faob(	.A_in(A_N[i]),
-						.B_in(B_N[i]),
-						.C_in(aux[i]),
-						.C_out(aux[i+1]), // This "i+1" is done so that each Cin recieve a Cout
-						.Q_out(Qout_N[i])
+				.B_in(B_N[i]),
+				.C_in(aux[i]),
+				.C_out(aux[i+1]), // This "i+1" is done so that each Cin recieve a Cout
+				.Q_out(Qout_N[i])
 					 );
 	end
 endgenerate
@@ -258,7 +260,7 @@ endmodule
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation"/>
+<img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation" width="550"/>
 </kbd>
 </p>
 <p align="center">
@@ -270,7 +272,7 @@ endmodule
 **2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate"/>
+<img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate" width="550"/>
 </kbd>
 </p>
 <p align="center">
@@ -282,7 +284,7 @@ endmodule
 **3.** Finally describing the Full Adder in a compact way
 <p align="center">
 <kbd>
-<img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact"/>  
+<img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact" width="550"/>  
 </kbd>
 </p>
 <p align="center">
@@ -333,7 +335,7 @@ The Pin Planner configuration is shown below
 
 <p align="center">
 <kbd>
-<img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="450"/> 
+<img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="550"/> 
 </kbd>   
 </p>
 
