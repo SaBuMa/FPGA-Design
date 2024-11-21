@@ -3,10 +3,12 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
 
 ## Block Diagram and Truth Table
 <p align="Center">
-<kbd>
-<img src="FAOB_Img/FullAdderOneBit.png" alt="Block Dia" width="350" /> 
-<img src="FAOB_Img/FullAdderOneBitTruthTable.png" alt="Truth Tab" width="250" />  
-</kbd>
+	<kbd>
+		<img src="FAOB_Img/FullAdderOneBit.png" alt="Block Dia" width="350" /> 
+	</kbd>
+	<kbd>
+		<img src="FAOB_Img/FullAdderOneBitTruthTable.png" alt="Truth Tab" width="290" />  
+	</kbd>
 </p>
 
 ## Hardware used
