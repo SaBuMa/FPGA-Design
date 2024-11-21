@@ -44,7 +44,7 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
   </i>
 </p>
 <p align="center">
-<img src="../FPGA_PrjImg/Quartus.jpg" alt="QuartusPrime" width="300"/> 
+<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="300"/> 
 <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
 </p>
 
