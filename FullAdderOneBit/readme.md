@@ -254,5 +254,5 @@ After doing all the preparation work describe before, go to:
 Tools-->Programmer. To program the Development Board with the .sof file that has been created inside the root folder of the project.
 
 <p align="center">
-<img src="FAOB_Img/FAOB_gif.gif" alt="Working GIF" width="500">
+<img src="FAOB_Img/FPGAWorking.gif" alt="Working GIF" width="500">
 </p>
