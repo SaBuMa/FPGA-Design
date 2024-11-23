@@ -42,7 +42,7 @@ For this scenario, an **N Bit Full Adder** is being implemented using **logic ga
 </p>
 <p align="center">
 <kbd>
-<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="300"/> 
+<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="170"/> 
 </kbd>
 <kbd>
 <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
