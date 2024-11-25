@@ -10,7 +10,7 @@ The circuits implemented are:
 </a>
 </p>
 
-## Full adder N bits (4 Bits)
+## [Full adder N bits (4 Bits)](FullAdderNBits)
 <p align="Center">
 <a href="FullAdderNBits/readme.md">
 <kbd>
@@ -19,7 +19,15 @@ The circuits implemented are:
 </a>
 </p>
 
-## Comparator
+## [Comparator 1 Bit](ComparatorOneBit)
+<p align="Center">
+<a href="ComparatorOneBit/readme.md">
+<kbd>
+<img src="ComparatorOneBit/COB_Img/COB_Block.png" alt="COB" width="350"/> 
+</kbd>
+</a>
+</p>
+
 ## Majority vote
 ## Binary Counter
 ## RAM
