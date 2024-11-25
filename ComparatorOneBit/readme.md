@@ -4,8 +4,10 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
 ## Block Diagram and Truth Table
 <p align="Center">
 <kbd>
-<img src="../COB_Img/COB_Block.png" alt="Block Dia" width="350" /> 
-<img src="../COB_Img/TruthTable.png" alt="Truth Tab" width="250" />  
+<img src="COB_Img/COB_Block.png" alt="Block Dia" width="380" />
+</kbd>
+<kbd>
+<img src="COB_Img/TruthTable.png" alt="Truth Tab" width="380" />  
 </kbd>
 </p>
 
@@ -43,10 +45,10 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
 </p>
 <p align="center">
 <kbd>
-<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="170"/> 
+<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="130"/> 
 </kbd>
 <kbd>
-<img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
+<img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="130"/>  
 </kbd>
 </p>
 
@@ -106,7 +108,7 @@ END ARCHITECTURE behavioral;
 **1.** This first image represent the Comparator One Bit in a Gate Level description.
 <p align="center">
 <kbd>
-<img src="../COB_Img/COB_VHDL_GateLevel.png" alt="COB_VHDL_GateLevel"/>
+<img src="COB_Img/COB_VHDL_GateLevel.png" alt="COB_VHDL_GateLevel" width="350"/>
 </kbd>
 </p>
 <p align="center">
@@ -118,7 +120,7 @@ END ARCHITECTURE behavioral;
 **2.** Finally describing the Comparator in a compact way
 <p align="center">
 <kbd>
-<img src="../COB_Img/COB_VHDL_Compact.png" alt="COB_VHDL_Compact"/>  
+<img src="COB_Img/COB_VHDL_Compact.png" alt="COB_VHDL_Compact" width="350"/>  
 </kbd>
 </p>
 <p align="center">
@@ -183,7 +185,7 @@ endmodule
 **1.** This first image represent the Comparator One Bit in a Gate Level description.
 <p align="center">
 <kbd>
-<img src="../COB_Img/COB_Verilog_GateLevel.png" alt="COB_Verilog_Gate Level"/>
+<img src="COB_Img/COB_Verilog_GateLevel.png" alt="COB_Verilog_Gate Level" width="350"/>
 </kbd>
 </p>
 <p align="center">
@@ -195,7 +197,7 @@ endmodule
 **2.** Finally describing the Comparator in a compact way
 <p align="center">
 <kbd>
-<img src="../COB_Img/COB_Verilog_Compact.png" alt="COB_Verilog_Compact"/>  
+<img src="COB_Img/COB_Verilog_Compact.png" alt="COB_Verilog_Compact" width="350"/>  
 </kbd>
 </p>
 <p align="center">
