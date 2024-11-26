@@ -18,8 +18,12 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
     </b>
 </p>
 <p align="center">
-<img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="300"/> 
-<img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="300"/> 
+    <kbd>
+        <img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
+    </kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
+    </kbd>
 </p>
 
 ## Software used
@@ -28,6 +32,10 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
         Design Software  
     </b>
 </p>
+<p align="center">
+    <kbd>
+        <img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
+    </kbd>
 <p align ="center" >
     <i>
          Quartus --> Design / Synthesis / FPGA Support.
@@ -39,19 +47,15 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
     </b>
 </p>
 <p align="center">
+    <kbd>
+        <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
+    </kbd>
+</p>
+<p align="center">
   <i>
         Mentor Graphics Questa (Modelsim) --> Functional Timing.
   </i>
 </p>
-<p align="center">
-	<kbd>
-		<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="170"/> 
-	</kbd>
-	<kbd>
-		<img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="170"/>  
-	</kbd>
-</p>
-
 
 ## [VHDL](VHDL_Files)
 ### VHDL Code
@@ -214,8 +218,12 @@ To represent the Outputs of the Full Adder circuit, the red **LEDs**
 also present in the board are going to be used.
 
 <p align="center">
-<img src="FAOB_Img/Switches.png" alt="Switches" width="300"/>  
-<img src="FAOB_Img/LEDs.png" alt="LEDs" width="283"/>  
+    <kbd>
+        <img src="../FPGA_PrjImg/Switches.png" alt="Switches" width="250"/>  
+    </kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/LEDs.png" alt="LEDs" width="235"/>  
+    </kbd>
 </p>
 
 To proceed with the assignment of the **Switches** and **LEDs** to the Inputs and
@@ -228,10 +236,12 @@ the pins that are hard-wire from the **ALTERA MAX 10 FPGA** to the **Switches** 
 (The User Manual is shown below )
 
 <p align="center">
-<kbd>
-<img src="FAOB_Img/LEDs_pag28.png" alt="UserManual" width="250"/>    
-<img src="FAOB_Img/Switches_pag27.png" alt="UserManual" width="250"/>    
-</kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/LEDs_pag28.png" alt="UserManual" width="250"/>
+    </kbd>
+    <kbd>    
+        <img src="../FPGA_PrjImg/Switches_pag27.png" alt="UserManual" width="250"/>
+    </kbd>    
 </p>
 
 Now, for the next stage, proceed to choose:
