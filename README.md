@@ -14,7 +14,7 @@ The circuits implemented are:
 <p align="Center">
 <a href="FullAdderNBits/readme.md">
 <kbd>
-<img src="FullAdderNBits/FANB_Img/FullAdderNBits.png" alt="FANB"/> 
+<img src="FullAdderNBits/FANB_Img/FullAdderNBits.png" alt="FANB" width="550"/> 
 </kbd>
 </a>
 </p>
