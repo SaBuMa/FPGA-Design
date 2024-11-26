@@ -18,8 +18,12 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
     </b>
 </p>
 <p align="center">
-<img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="300"/> 
-<img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="300"/> 
+<kbd>
+<img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
+</kbd>
+<kbd>
+<img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
+</kbd>
 </p>
 
 ## Software used
@@ -28,6 +32,10 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
         Design Software  
     </b>
 </p>
+<p align="center">
+    <kbd>
+        <img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
+    </kbd>
 <p align ="center" >
     <i>
          Quartus --> Design / Synthesis / FPGA Support.
@@ -39,19 +47,15 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
     </b>
 </p>
 <p align="center">
+    <kbd>
+        <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
+    </kbd>
+</p>
+<p align="center">
   <i>
         Mentor Graphics Questa (Modelsim) --> Functional Timing.
   </i>
 </p>
-<p align="center">
-<kbd>
-<img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="130"/> 
-</kbd>
-<kbd>
-<img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="130"/>  
-</kbd>
-</p>
-
 
 ## [VHDL](VHDL_Files)
 ### VHDL Code
@@ -62,7 +66,7 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL; -- Used to implement the adder
-											-- In a compact description
+				 -- In a compact description
 
 --***************** ENITY = Inputs Outputs ******************--
 --***********************************************************--
@@ -132,17 +136,19 @@ END ARCHITECTURE behavioral;
 ## [Verilog](Verilog_Files)
 ## Verilog Code
 ```
+//******************* Comparator One Bit ********************--
+//***********************************************************--
+
 //**************** Module Inputs nad Outputs ****************--
 //***********************************************************--
 module COB
  (	
 	input A_in,B_in,
 	
-	output reg AeqB, AgrtB, AlwrB // Use this line in combination with
-											// The "always" block
-									
-//	output AeqB, AgrtB, AlwrB 		// Used this line in combination with
-											// The "assign" expression
+//	output reg AeqB, AgrtB, AlwrB // Use this line in combination with
+				      // The "always" block				
+	output AeqB, AgrtB, AlwrB     // Used this line in combination with
+				      // The "assign" expression
 
 // AeqB -> A = B // AgrtB -> A > B // AlwrB -> A < B
  );
@@ -155,16 +161,16 @@ module COB
 //******************** Module Description *******************--
 //***********************************************************--
 
-//// Auxiliary Equations
-//assign e0 = (!A_in) & B_in;
-//assign e1 = (!B_in) & A_in;
-//
-//
-//// Using the output as a "net" type
-//
-//assign	 AlwrB = e0;
-//assign	 AgrtB = e1;
-//assign	 AeqB = e0 ~^ e1;
+// Auxiliary Equations
+assign e0 = (!A_in) & B_in;
+assign e1 = (!B_in) & A_in;
+
+
+// Using the output as a "net" type
+
+assign	 AlwrB = e0;
+assign	 AgrtB = e1;
+assign	 AeqB = e0 ~^ e1;
 
 
 //************* Compact description of Adder ****************--
@@ -172,17 +178,17 @@ module COB
 
 // Other Options, but only functional when output is of type "reg"     		
                    	          	
-always @(A_in or B_in)
-	begin: COMPARE
-		AlwrB = (A_in < B_in);
-		AgrtB = (A_in > B_in);
-		AeqB = (A_in == B_in);
-	end
+//always @(A_in or B_in)
+//	begin: COMPARE
+//		AlwrB = (A_in < B_in);
+//		AgrtB = (A_in > B_in);
+//		AeqB = (A_in == B_in);
+//	end
 
 endmodule 
 ```
 ## Verilog RTL
-**1.** This first image represent the Comparator One Bit in a Gate Level description.
+**1.** This first image represent the **Comparator One Bit** in a **Gate Level description**.
 <p align="center">
 <kbd>
 <img src="COB_Img/COB_Verilog_GateLevel.png" alt="COB_Verilog_Gate Level" width="350"/>
@@ -194,7 +200,7 @@ endmodule
     </b>
 </p>
 
-**2.** Finally describing the Comparator in a compact way
+**2.** Finally describing the **Comparator** in a **"compact"** way
 <p align="center">
 <kbd>
 <img src="COB_Img/COB_Verilog_Compact.png" alt="COB_Verilog_Compact" width="350"/>  
@@ -202,7 +208,7 @@ endmodule
 </p>
 <p align="center">
     <b>
-       RTL Compact Description
+       RTL "Compact" Description
     </b>
 </p>
 
@@ -217,8 +223,12 @@ To represent the Outputs of the Full Adder circuit, the red **LEDs**
 also present in the board are going to be used.
 
 <p align="center">
-<img src="FANB_Img/Switches.png" alt="Switches" width="300"/>  
-<img src="FANB_Img/LEDs.png" alt="LEDs" width="283"/>  
+    <kbd>
+        <img src="../FPGA_PrjImg/Switches.png" alt="Switches" width="250"/>  
+    </kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/LEDs.png" alt="LEDs" width="235"/>  
+    </kbd>
 </p>
 
 To proceed with the assignment of the **Switches** and **LEDs** to the Inputs and
@@ -231,10 +241,12 @@ the pins that are hard-wire from the **ALTERA MAX 10 FPGA** to the **Switches** 
 (The User Manual is shown below )
 
 <p align="center">
-<kbd>
-<img src="FANB_Img/LEDs_pag28.png" alt="UserManual" width="250"/>    
-<img src="FANB_Img/Switches_pag27.png" alt="UserManual" width="250"/>
-</kbd>    
+    <kbd>
+        <img src="../FPGA_PrjImg/LEDs_pag28.png" alt="UserManual" width="250"/>
+    </kbd>
+    <kbd>    
+        <img src="../FPGA_PrjImg/Switches_pag27.png" alt="UserManual" width="250"/>
+    </kbd>    
 </p>
 
 Now, for the next stage, proceed to choose:
@@ -248,7 +260,10 @@ The Pin Planner configuration is shown below
 
 <p align="center">
 <kbd>
-<img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="450"/> 
+<img src="COB_Img/PinPlanner.png" alt="PinPlanner" width="450"/> 
+</kbd>   
+<kbd>
+<img src="COB_Img/PinPlanner_Zoom.png" alt="PinPlannerZoom" width="450"/> 
 </kbd>   
 </p>
 
@@ -260,5 +275,5 @@ After doing all the preparation work described before, go to:
 To program the Development Board with the **.sof** file that has been created inside the root folder of the project.
 
 <p align="center">
-<img src="FANB_Img/FPGAWorking.gif" alt="Working .gif" width="500">
+<img src="COB_Img//FPGAWorking.gif" alt="Working .gif" width="500">
 </p>
