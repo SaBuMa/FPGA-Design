@@ -3,12 +3,12 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
 
 ## Block Diagram and Truth Table
 <p align="Center">
-<kbd>
-<img src="COB_Img/COB_Block.png" alt="Block Dia" width="380" />
-</kbd>
-<kbd>
-<img src="COB_Img/TruthTable.png" alt="Truth Tab" width="380" />  
-</kbd>
+    <kbd>
+        <img src="COB_Img/COB_Block.png" alt="Block Dia" width="380" />
+    </kbd>
+    <kbd>
+        <img src="COB_Img/TruthTable.png" alt="Truth Tab" width="380" />  
+    </kbd>
 </p>
 
 ## Hardware used
@@ -18,12 +18,12 @@ For this scenario, a Comparator is being implemented using **logic gates**. Then
     </b>
 </p>
 <p align="center">
-<kbd>
-<img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
-</kbd>
-<kbd>
-<img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
-</kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
+    </kbd>
+    <kbd>
+        <img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
+    </kbd>
 </p>
 
 ## Software used
@@ -111,9 +111,9 @@ END ARCHITECTURE behavioral;
 ### VHDL RTL
 **1.** This first image represent the Comparator One Bit in a Gate Level description.
 <p align="center">
-<kbd>
-<img src="COB_Img/COB_VHDL_GateLevel.png" alt="COB_VHDL_GateLevel" width="350"/>
-</kbd>
+    <kbd>
+        <img src="COB_Img/COB_VHDL_GateLevel.png" alt="COB_VHDL_GateLevel" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -123,9 +123,9 @@ END ARCHITECTURE behavioral;
 
 **2.** Finally describing the Comparator in a compact way
 <p align="center">
-<kbd>
-<img src="COB_Img/COB_VHDL_Compact.png" alt="COB_VHDL_Compact" width="350"/>  
-</kbd>
+    <kbd>
+        <img src="COB_Img/COB_VHDL_Compact.png" alt="COB_VHDL_Compact" width="500"/>  
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -190,9 +190,9 @@ endmodule
 ## Verilog RTL
 **1.** This first image represent the **Comparator One Bit** in a **Gate Level description**.
 <p align="center">
-<kbd>
-<img src="COB_Img/COB_Verilog_GateLevel.png" alt="COB_Verilog_Gate Level" width="350"/>
-</kbd>
+    <kbd>
+        <img src="COB_Img/COB_Verilog_GateLevel.png" alt="COB_Verilog_Gate Level" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -202,16 +202,15 @@ endmodule
 
 **2.** Finally describing the **Comparator** in a **"compact"** way
 <p align="center">
-<kbd>
-<img src="COB_Img/COB_Verilog_Compact.png" alt="COB_Verilog_Compact" width="350"/>  
-</kbd>
+    <kbd>
+        <img src="COB_Img/COB_Verilog_Compact.png" alt="COB_Verilog_Compact" width="500"/>  
+    </kbd>
 </p>
 <p align="center">
     <b>
        RTL "Compact" Description
     </b>
 </p>
-
 
 ## Board Configuration
 ### Pin assignment
@@ -259,12 +258,12 @@ These pins are declared in the Pin PLanner of Quartus:
 The Pin Planner configuration is shown below
 
 <p align="center">
-<kbd>
-<img src="COB_Img/PinPlanner.png" alt="PinPlanner" width="450"/> 
-</kbd>   
-<kbd>
-<img src="COB_Img/PinPlanner_Zoom.png" alt="PinPlannerZoom" width="450"/> 
-</kbd>   
+    <kbd>
+        <img src="COB_Img/PinPlanner.png" alt="PinPlanner" width="550"/> 
+    </kbd>   
+    <kbd>
+        <img src="COB_Img/PinPlanner_Zoom.png" alt="PinPlannerZoom" width="550"/> 
+    </kbd>   
 </p>
 
 After assigning the Pins for the Inputs and Outputs, perform ***"I/O Assignment Analysis"*** to check for error in the assignments. For the last step perform a Full compilation of all the circuit before uploading it to the board. 
@@ -275,5 +274,5 @@ After doing all the preparation work described before, go to:
 To program the Development Board with the **.sof** file that has been created inside the root folder of the project.
 
 <p align="center">
-<img src="COB_Img//FPGAWorking.gif" alt="Working .gif" width="500">
+    <img src="COB_Img//FPGAWorking.gif" alt="Working .gif" width="500">
 </p>
