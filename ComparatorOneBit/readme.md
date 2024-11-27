@@ -85,7 +85,7 @@ ARCHITECTURE behavioral OF COB IS
 --******************* Auxiliary cables **********************--
 --***********************************************************--
 	SIGNAL e0, e1	: STD_LOGIC; -- e --> Equations
---	SIGNAL aux		: STD_LOGIC_VECTOR(1 downto 0);
+--	SIGNAL aux	: STD_LOGIC_VECTOR(1 downto 0);
 
 --******************** Module Description *******************--
 --***********************************************************--
@@ -146,10 +146,10 @@ module COB
 	input A_in,B_in,
 	
 //	output reg AeqB, AgrtB, AlwrB // Use this line in combination with
-											// The "always" block
+				      // The "always" block
 									
-	output AeqB, AgrtB, AlwrB 		// Used this line in combination with
-											// The "assign" expression
+	output AeqB, AgrtB, AlwrB     // Used this line in combination with
+				      // The "assign" expression
 
 // AeqB -> A = B // AgrtB -> A > B // AlwrB -> A < B
  );
