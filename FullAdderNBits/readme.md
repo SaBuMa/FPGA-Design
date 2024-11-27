@@ -3,9 +3,9 @@ For this scenario, an **N Bit Full Adder** is being implemented using **logic ga
 
 ## Block Diagram and Truth Table
 <p align="Center">
-<kbd>
-<img src="FANB_Img/FullAdderNBits.png" alt="Block" width="750"/> 
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FullAdderNBits.png" alt="Block" width="750"/> 
+    </kbd>
 </p>
 
 ## Hardware used
@@ -163,9 +163,9 @@ END ARCHITECTURE behavioral;
 ### VHDL RTL
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation" width="500"/>
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_VHDL_Instantiation.png" alt="FANB_VHDL_Instantiation" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -175,9 +175,9 @@ END ARCHITECTURE behavioral;
 
 **2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate" width="500"/>
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_VHDL_Generate.png" alt="FANB_VHDL_Generate" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -187,9 +187,9 @@ END ARCHITECTURE behavioral;
 
 **3.** Finally describing the Full Adder in a compact way
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact" width="500"/>  
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_VHDL_Compact.png" alt="FANB_VHDL_Compact" width="500"/>  
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -231,7 +231,7 @@ wire [Nbits:0] aux;	// Used in Generate Module
 //FAOB faob2(.A_in(A_N[2]), .B_in(B_N[2]),.C_in(co[1]),.Q_out(Qout_N[2]),.C_out(co[2]));
 //FAOB faob3(.A_in(A_N[3]), .B_in(B_N[3]),.C_in(co[2]),.Q_out(Qout_N[3]),.C_out(Cout));
 
-//******************** Generte Module ***********************--
+//******************** Generate Module ***********************--
 //***********************************************************--
 
 // First assign the Carry in to the auxiliary cable [0]
@@ -263,9 +263,9 @@ endmodule
 ## Verilog RTL
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation" width="500"/>
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_Verilog_Instantiation.png" alt="FANB_Verilog_Instantiation" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -275,9 +275,9 @@ endmodule
 
 **2.** This second image represent the Full Adder N Bits in a Gate Level description using the **Generate Block**
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate" width="500"/>
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_Verilog_Generate.png" alt="FANB_Verilog_Generate" width="500"/>
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -287,9 +287,9 @@ endmodule
 
 **3.** Finally describing the Full Adder in a compact way
 <p align="center">
-<kbd>
-<img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact" width="500"/>  
-</kbd>
+    <kbd>
+        <img src="FANB_Img/FANB_Verilog_Compact.png" alt="FANB_erilog_Compact" width="500"/>  
+    </kbd>
 </p>
 <p align="center">
     <b>
@@ -345,9 +345,9 @@ These pins are declared in the Pin PLanner of Quartus:
 The Pin Planner configuration is shown below
 
 <p align="center">
-<kbd>
-<img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="550"/> 
-</kbd>   
+    <kbd>
+        <img src="FANB_Img/PinPlanner.png" alt="PinPlanner" width="550"/> 
+    </kbd>   
 </p>
 
 After assigning the Pins for the Inputs and Outputs, perform ***"I/O Assignment Analysis"*** to check for error in the assignments. For the last step perform a Full compilation of all the circuit before uploading it to the board. 
@@ -358,5 +358,5 @@ After doing all the preparation work described before, go to:
 To program the Development Board with the **.sof** file that has been created inside the root folder of the project.
 
 <p align="center">
-<img src="FANB_Img/FPGAWorking.gif" alt="Working .gif" width="500">
+    <img src="FANB_Img/FPGAWorking.gif" alt="Working .gif" width="500">
 </p>
