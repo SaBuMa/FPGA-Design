@@ -109,7 +109,7 @@ END ARCHITECTURE behavioral;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
-**1.** This first image represent the Comparator One Bit in a Gate Level description.
+**1.** This first image represent the **Comparator One Bit** in a Gate Level description.
 <p align="center">
     <kbd>
         <img src="COB_Img/COB_VHDL_GateLevel.png" alt="COB_VHDL_GateLevel" width="500"/>
@@ -121,7 +121,7 @@ END ARCHITECTURE behavioral;
     </b>
 </p>
 
-**2.** Finally describing the Comparator in a compact way
+**2.** Finally describing the **Comparator** in a compact way
 <p align="center">
     <kbd>
         <img src="COB_Img/COB_VHDL_Compact.png" alt="COB_VHDL_Compact" width="500"/>  
@@ -146,9 +146,10 @@ module COB
 	input A_in,B_in,
 	
 //	output reg AeqB, AgrtB, AlwrB // Use this line in combination with
-				      // The "always" block				
-	output AeqB, AgrtB, AlwrB     // Used this line in combination with
-				      // The "assign" expression
+											// The "always" block
+									
+	output AeqB, AgrtB, AlwrB 		// Used this line in combination with
+											// The "assign" expression
 
 // AeqB -> A = B // AgrtB -> A > B // AlwrB -> A < B
  );
@@ -184,6 +185,10 @@ assign	 AeqB = e0 ~^ e1;
 //		AgrtB = (A_in > B_in);
 //		AeqB = (A_in == B_in);
 //	end
+
+//assign AlwrB = (A_in < B_in);
+//assign AgrtB = (A_in > B_in);
+//assign AeqB = (A_in == B_in);
 
 endmodule 
 ```
@@ -249,9 +254,9 @@ the pins that are hard-wire from the **ALTERA MAX 10 FPGA** to the **Switches** 
 </p>
 
 Now, for the next stage, proceed to choose:
-* The Switches **SW8 to SW5** for Inputs **A_N**, Switches **SW4 to SW1** for Inputs **B_N**, and Switche **SW0**for Input **Cin**.  
+* The Switch **SW1** for Input **A_in** and, Switch **SW0** for Input **B_in**. 
 
-* Then for the LEDs choose **LEDR4 to LEDR1** for Output **Q_N** and LED **LEDR0** for Output **Cout**.
+* Then for the LEDs choose **LEDR9** for Output **AlwrB_N**, LED **LEDR4** for Output **AeqB_N** and, LED **LEDR0** for Output **AgrtB_N**.
 
 These pins are declared in the Pin PLanner of Quartus:  
 ***Assignments-->Pin Planner***  
