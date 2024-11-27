@@ -66,17 +66,17 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL; -- Used to implement the adder
-											-- In a compact description
-USE IEEE.STD_LOGIC_MISC.ALL;		-- Used for vector reduction
+				 -- In a compact description
+USE IEEE.STD_LOGIC_MISC.ALL;	 -- Used for vector reduction
 
 --***************** ENITY = Inputs Outputs ******************--
 --***********************************************************--
 ENTITY CNB IS 
 GENERIC	(	Nbits			:	INTEGER := 4); -- Number of bits for
---															the circuit
+--								  the circuit
 PORT
 ( 	
-	A_N, B_N							: IN STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0); 
+	A_N, B_N			: IN STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0); 
 	AeqB_N, AgrtB_N, AlwrB_N	: OUT STD_LOGIC
 -- AeqB -> A = B // AgrtB -> A > B // AlwrB -> A < B
 );
@@ -174,7 +174,7 @@ END ARCHITECTURE behavioral;
 **1.** This first image represent the **Comparator N Bits** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_VHDL_GateLevel.png" alt="CNB_VHDL_GateLevel" width="500"/>
+        <img src="CNB_Img/CNB_VHDL_GateLevel.png" alt="CNB_VHDL_GateLevel" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -186,7 +186,7 @@ END ARCHITECTURE behavioral;
 **2.** This second image represent the **Comparator N Bits** in a Gate Level description using the **Generate Block**
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_VHDL_Generate.png" alt="CNB_VHDL_Generate" width="500"/>
+        <img src="CNB_Img/CNB_VHDL_Generate.png" alt="CNB_VHDL_Generate" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -198,7 +198,7 @@ END ARCHITECTURE behavioral;
 **3.** Finally describing the **Comparator** in a compact way
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_VHDL_Compact.png" alt="CNB_VHDL_Compact" width="500"/>  
+        <img src="CNB_Img/CNB_VHDL_Compact.png" alt="CNB_VHDL_Compact" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -221,10 +221,10 @@ module CNB
 	input [(Nbits-1):0]A_N,B_N,
 	
 //	output reg AeqB_N, AgrtB_N, AlwrB_N // Use this line in combination with
-													// The "always" block
+					    // The "always" block
 									
-	output AeqB_N, AgrtB_N, AlwrB_N 		// Used this line in combination with
-													// The "assign" expression
+	output AeqB_N, AgrtB_N, AlwrB_N     // Used this line in combination with
+					    // The "assign" expression
 
 // AeqB_N -> A = B // AgrtB_N -> A > B // AlwrB_N -> A < B
  );
@@ -294,7 +294,7 @@ endmodule
 **1.** This first image represent the **Comparator N Bits** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_Verilog_GateLevel.png" alt="CNB_Verilog_GateLevel" width="500"/>
+        <img src="CNB_Img/CNB_Verilog_GateLevel.png" alt="CNB_Verilog_GateLevel" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -306,7 +306,7 @@ endmodule
 **2.** This second image represent the **Comparator N Bits** in a Gate Level description using the **Generate Block**
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_Verilog_Generate.png" alt="CNB_Verilog_Generate" width="500"/>
+        <img src="CNB_Img/CNB_Verilog_Generate.png" alt="CNB_Verilog_Generate" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -318,7 +318,7 @@ endmodule
 **3.** Finally describing the **Comparator** in a compact way
 <p align="center">
     <kbd>
-        <img src="../CNB_Img/CNB_Verilog_Compact.png" alt="CNB_Verilog_Compact" width="500"/>  
+        <img src="CNB_Img/CNB_Verilog_Compact.png" alt="CNB_Verilog_Compact" width="500"/>  
     </kbd>
 </p>
 <p align="center">
