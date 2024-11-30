@@ -161,7 +161,7 @@ END ARCHITECTURE;
 **3.** Finally describing the **Binary Counter** Parameterized
 <p align="center">
     <kbd>
-        <img src="../BinCounter_Img/BinCounter_Parameterized.png" alt="BinCounter_Parameterized" width="500"/>  
+        <img src="BinCounter_Parameterized.png" alt="BinCounter_Parameterized" width="500"/>  
     </kbd>
 </p>
 <p align="center">
