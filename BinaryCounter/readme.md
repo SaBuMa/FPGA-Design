@@ -58,6 +58,78 @@ For this scenario, an **Binary Counter** is being implemented using **logic gate
 ### VHDL Code
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
+--********************** Binary Counter *********************--
+--***********************************************************--
+
+--******************* LIBRARY DEFINITION ********************--
+--***********************************************************--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+--***************** ENITY = Inputs Outputs ******************--
+--***********************************************************--
+ENTITY BinCounter IS
+	GENERIC	(	N				:	INTEGER	:= 4);
+	PORT 		(	clk			: 	IN		STD_LOGIC;
+					rst			: 	IN		STD_LOGIC;
+					ena			: 	IN		STD_LOGIC;
+					syn_clr		:	IN		STD_LOGIC;
+					load			:	IN 	STD_LOGIC;
+					up				:	IN		STD_LOGIC;
+					d				:	IN		STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+					max_tick		: 	OUT	STD_LOGIC;
+					min_tick		: 	OUT	STD_LOGIC;
+					counter		: 	OUT	STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+END ENTITY;
+
+--************ INTERCONNECTION BETWEEN SIGNALS **************--
+--***********************************************************--
+ARCHITECTURE rt1 OF BinCounter IS
+
+--******************* Auxiliary cables **********************--
+--***********************************************************--
+	CONSTANT ONES			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '1');
+	CONSTANT ZEROS			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '0');
+	-- SIGNAL count_s		:	INTEGER RANGE 0 to (2**N-1);
+	
+	SIGNAL count_s			:	UNSIGNED (N-1 DOWNTO 0);
+	SIGNAL count_next		:	UNSIGNED (N-1 DOWNTO 0);
+
+--******************** Module Description *******************--
+--***********************************************************--
+BEGIN
+
+
+--*********** Parameterized description of Adder ************--
+--***********************************************************--
+
+	-- NEXT STATE LOGIC
+	count_next	<=		(OTHERS => '0')	WHEN	syn_clr = '1'				   ELSE
+							unsigned(d)			WHEN	load='1'							ELSE
+							count_s + 1			WHEN	(ena = '1' AND up='1')		ELSE
+							count_s - 1			WHEN	(ena = '1' AND up='0')		ELSE
+							count_s;
+	PROCESS (clk,rst)
+		VARIABLE	temp	:	UNSIGNED(N-1 DOWNTO 0);
+	BEGIN
+		IF(rst = '1') THEN
+			temp :=	(OTHERS => '0');
+		ELSIF (rising_edge(clk)) THEN
+			IF (ena = '1') THEN
+				temp := count_next;
+			END IF;
+		END IF;
+		counter <=	STD_LOGIC_VECTOR(temp);
+		count_s <=	temp;
+	END PROCESS;
+	
+	--OUTPUT LOGIC
+	max_tick <= '1' WHEN count_s = ONES	   ELSE '0';
+	min_tick <= '1' WHEN count_s = ZEROS	ELSE '0';
+
+
+END ARCHITECTURE;
 
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
@@ -65,7 +137,7 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="BinCounter_Img/BinCounter_VHDL_GateLevel.png" alt="BinCounter_VHDL_GateLevel" width="500"/>
+        <img src="../BinCounter_Img/BinCounter_Parameterized.png" alt="BinCounter_Parameterized" width="500"/> 
     </kbd>
 </p>
 <p align="center">
@@ -77,7 +149,7 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 **2.** This second image represent the **Binary Counter** in a Gate Level description using the **Generate Block**
 <p align="center">
     <kbd>
-        <img src="CNB_Img/CNB_VHDL_Generate.png" alt="CNB_VHDL_Generate" width="500"/>
+        <img src="../BinCounter_Img/BinCounter_Parameterized.png" alt="BinCounter_Parameterized" width="500"/> 
     </kbd>
 </p>
 <p align="center">
@@ -86,15 +158,15 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
     </b>
 </p>
 
-**3.** Finally describing the **Binary Counter** in a compact way
+**3.** Finally describing the **Binary Counter** Parameterized
 <p align="center">
     <kbd>
-        <img src="CNB_Img/CNB_VHDL_Compact.png" alt="CNB_VHDL_Compact" width="500"/>  
+        <img src="../BinCounter_Img/BinCounter_Parameterized.png" alt="BinCounter_Parameterized" width="500"/>  
     </kbd>
 </p>
 <p align="center">
     <b>
-       RTL Compact Description
+       RTL Parameterized Description
     </b>
 </p>
 
