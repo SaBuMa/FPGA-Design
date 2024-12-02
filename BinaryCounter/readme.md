@@ -4,7 +4,7 @@ For this scenario, an **Binary Counter** is being implemented using **logic gate
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="BinCounter_Img/BinCounter_Block.png" alt="Block Dia" width="380" />
+        <img src="BinCounter_Block.png" alt="Block Dia" width="380" />
     </kbd>
 </p>
 
