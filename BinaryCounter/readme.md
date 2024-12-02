@@ -55,7 +55,64 @@ For this scenario, an **Binary Counter** is being implemented using **logic gate
 </p>
 
 ## [VHDL](VHDL_Files)
-### VHDL Code
+### VHDL Code Gate Level
+For the code, **VHDL 2008** was used in order to allow comments using "--"  
+```
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+------------------------------------
+ENTITY Counter IS
+	GENERIC	(	N				:	INTEGER	:= 4);
+	PORT 		(	clk			: 	IN		STD_LOGIC;
+					rst			: 	IN		STD_LOGIC;
+					ena			: 	IN		STD_LOGIC;
+					counter		: 	OUT	STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+END ENTITY;
+------------------------------------
+ARCHITECTURE rt1 OF Counter IS
+	SIGNAL e1,e2	:	STD_LOGIC;
+	SIGNAL e0,e3	:	STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+
+BEGIN
+
+DUT0: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		ena,
+				d		=> 	e3(0),
+				q		=>    e0(0));
+				
+DUT1: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e0(0),
+				d		=> 	e3(1),
+				q		=>    e0(1));
+				
+DUT2: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e1,
+				d		=> 	e3(2),
+				q		=>    e0(2));
+
+DUT3: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e2,
+				d		=> 	e3(3),
+				q		=>    e0(3));
+
+counter <= e0;
+e1 <= e0(1) AND e0(0);
+e2 <=	e0(2) AND e0(1) AND e0(0);
+e3	<=	NOT e0;
+				
+END ARCHITECTURE;
+
+```
+### VHDL Code Parametrized
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --********************** Binary Counter *********************--
