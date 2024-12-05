@@ -5,7 +5,7 @@ For this scenario, a **Synchronous Binary Counter** is being implemented using *
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="380" />
+        <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
@@ -299,7 +299,7 @@ END ARCHITECTURE;
 ## Simulation
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCount_Simu.png" alt="SynchBinCount_Simu" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCount_Simu.png" alt="SynchBinCount_Simu"/>  
     </kbd>
 </p>
 <p align="center">
