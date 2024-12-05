@@ -5,7 +5,7 @@ For this scenario, a **Synchronous Binary Counter** is being implemented using *
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="../SynchBinCount_Img/SynchBinCounter_Block.png" alt="Block Dia" width="380" />
+        <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="380" />
     </kbd>
 </p>
 
@@ -162,7 +162,7 @@ END ARCHITECTURE;
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
-        <img src="../SynchBinCount_Img/SynchBinCount_FlipFlop.png" alt="SynchBinCount_FlipFlop" width="500"/> 
+        <img src="SynchBinCount_Img/SynchBinCount_FlipFlop.png" alt="SynchBinCount_FlipFlop" width="500"/> 
     </kbd>
 </p>
 <p align="center">
@@ -174,7 +174,7 @@ END ARCHITECTURE;
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="../SynchBinCount_Img/SynchBinCount_Parameterized.png" alt="SynchBinCount_Parameterized" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCount_Parameterized.png" alt="SynchBinCount_Parameterized" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -299,7 +299,7 @@ END ARCHITECTURE;
 ## Simulation
 <p align="center">
     <kbd>
-        <img src="../SynchBinCount_Img/SynchBinCount_Simu.png" alt="SynchBinCount_Simu" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCount_Simu.png" alt="SynchBinCount_Simu" width="500"/>  
     </kbd>
 </p>
 <p align="center">
