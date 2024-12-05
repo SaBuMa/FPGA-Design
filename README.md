@@ -40,7 +40,7 @@ The circuits implemented are:
 
 ## [Synchronous Binary Counter](SynchBinCount)
 <p align="Center">
-    <a href="ComparatorNBits/readme.md">
+    <a href="SynchBinCount/readme.md">
         <kbd>
             <img src="SynchBinCount/SynchBinCount_Img/SynchBinCount_Block.png" alt="Synchronous Binary Counter" width="350"/> 
         </kbd>
