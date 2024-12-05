@@ -37,9 +37,18 @@ The circuits implemented are:
     </a>
 </p>
 
-## Majority vote
-## Binary Counter
+
+## [Synchronous Binary Counter](SynchBinCount)
+<p align="Center">
+    <a href="ComparatorNBits/readme.md">
+        <kbd>
+            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCount_Block.png" alt="Synchronous Binary Counter" width="350"/> 
+        </kbd>
+    </a>
+</p>
+
 ## RAM
 ## FSM
 ## ALU
 ## FIFO
+## Majority vote
