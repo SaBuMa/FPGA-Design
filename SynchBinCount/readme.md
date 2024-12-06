@@ -243,27 +243,15 @@ endmodule
     </b>
 </p>
 
-**2.** This second image represent the **Binary Counter** in a Gate Level description using the **Generate Block**
+**2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="CNB_Img/CNB_Verilog_Generate.png" alt="CNB_Verilog_Generate" width="500"/>
+        <img src="SynchBinCount_Img/SynchBinCount_Verilog_Parameterized.png" alt="SynchBinCount_Verilog_Parameterized" width="500"/>  
     </kbd>
 </p>
 <p align="center">
     <b>
-       RTL Gate Level Generate Block
-    </b>
-</p>
-
-**3.** Finally describing the **Binary Counter** in a compact way
-<p align="center">
-    <kbd>
-        <img src="CNB_Img/CNB_Verilog_Compact.png" alt="CNB_Verilog_Compact" width="500"/>  
-    </kbd>
-</p>
-<p align="center">
-    <b>
-       RTL Compact Description
+       RTL Parameterized Description
     </b>
 </p>
 
