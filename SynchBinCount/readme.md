@@ -186,7 +186,49 @@ END ARCHITECTURE;
 ## [Verilog](Verilog_Files)
 ## Verilog Code
 ```
+//**************** Synchronous Binary Counter ***************--
+//***********************************************************--
 
+//**************** Module Inputs and Outputs ****************--
+//***********************************************************--
+module SynchBinCount
+#(parameter Dwidth = 4 // #bits in word
+ )
+(
+    input clk,            			// Clock
+    input rst,          			// Reset
+    input ena,         			 	// Enable
+    output reg [(Dwidth-1):0]counter	// Parallel Output 	
+); 
+
+//******************* Auxiliary cables **********************--
+//***********************************************************--
+
+reg [(Dwidth-1):0]reg1,reg2;
+reg reg3;
+
+//***************** Module Instantiation ********************--
+//***********************************************************--
+
+
+
+//****************** Module Parameterization ****************--
+//***********************************************************--
+always @(posedge clk)
+begin
+	if(rst==0)
+		reg1 = "0000";
+	else if (clk)
+		if (ena == 1)
+			reg1 =  reg2 + 1;
+		else
+			reg1 = reg2;
+			
+	counter	= reg1;
+	reg2 		= reg1;	
+end
+
+endmodule 
 ```
 ## Verilog RTL
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
