@@ -10,11 +10,11 @@ USE IEEE.NUMERIC_STD.ALL;
 --***************** ENITY = Inputs Outputs ******************--
 --***********************************************************--
 ENTITY SynchBinCount IS
-	GENERIC	(	N				:	INTEGER	:= 4);
+	GENERIC	(	Nbits				:	INTEGER	:= 4);
 	PORT 		(	clk			: 	IN		STD_LOGIC;
 					rst			: 	IN		STD_LOGIC;
 					ena			: 	IN		STD_LOGIC;
-					counter		: 	OUT	STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+					counter		: 	OUT	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0));
 END ENTITY;
 
 --************ INTERCONNECTION BETWEEN SIGNALS **************--
@@ -23,15 +23,15 @@ ARCHITECTURE rt1 OF SynchBinCount IS
 
 --******************* Auxiliary cables **********************--
 --***********************************************************--
-	CONSTANT ONES			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '1');
-	CONSTANT ZEROS			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '0');
+	CONSTANT ONES			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '1');
+	CONSTANT ZEROS			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '0');
 	-- SIGNAL count_s		:	INTEGER RANGE 0 to (2**N-1);
 	
-	SIGNAL count_s			:	UNSIGNED (N-1 DOWNTO 0);
-	SIGNAL count_next		:	UNSIGNED (N-1 DOWNTO 0);
+	SIGNAL count_s			:	UNSIGNED (Nbits-1 DOWNTO 0);
+	SIGNAL count_next		:	UNSIGNED (Nbits-1 DOWNTO 0);
 	
 	SIGNAL e1,e2			:	STD_LOGIC;
-	SIGNAL e0,e3			:	STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+	SIGNAL e0,e3			:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
 
 --******************** Module Description *******************--
 --***********************************************************--
