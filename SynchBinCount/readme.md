@@ -71,11 +71,11 @@ USE IEEE.NUMERIC_STD.ALL;
 --***************** ENITY = Inputs Outputs ******************--
 --***********************************************************--
 ENTITY SynchBinCount IS
-	GENERIC	(	N				:	INTEGER	:= 4);
+	GENERIC	(	Nbits				:	INTEGER	:= 4);
 	PORT 		(	clk			: 	IN		STD_LOGIC;
 					rst			: 	IN		STD_LOGIC;
 					ena			: 	IN		STD_LOGIC;
-					counter		: 	OUT	STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+					counter		: 	OUT	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0));
 END ENTITY;
 
 --************ INTERCONNECTION BETWEEN SIGNALS **************--
@@ -84,15 +84,15 @@ ARCHITECTURE rt1 OF SynchBinCount IS
 
 --******************* Auxiliary cables **********************--
 --***********************************************************--
-	CONSTANT ONES			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '1');
-	CONSTANT ZEROS			:	UNSIGNED (N-1 DOWNTO 0)	:=	(OTHERS => '0');
+	CONSTANT ONES			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '1');
+	CONSTANT ZEROS			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '0');
 	-- SIGNAL count_s		:	INTEGER RANGE 0 to (2**N-1);
 	
-	SIGNAL count_s			:	UNSIGNED (N-1 DOWNTO 0);
-	SIGNAL count_next		:	UNSIGNED (N-1 DOWNTO 0);
+	SIGNAL count_s			:	UNSIGNED (Nbits-1 DOWNTO 0);
+	SIGNAL count_next		:	UNSIGNED (Nbits-1 DOWNTO 0);
 	
 	SIGNAL e1,e2			:	STD_LOGIC;
-	SIGNAL e0,e3			:	STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+	SIGNAL e0,e3			:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
 
 --******************** Module Description *******************--
 --***********************************************************--
@@ -192,22 +192,22 @@ END ARCHITECTURE;
 //**************** Module Inputs and Outputs ****************--
 //***********************************************************--
 module SynchBinCount
-#(parameter Dwidth = 4 // #bits in word
+#(parameter Nbits = 4 // #bits
  )
 (
    input clk,            				// Clock
    input rst,          					// Reset
    input ena,         			 		// Enable
-	output reg [(Dwidth-1):0]counter	// Output as 'reg' type
-//	output [(Dwidth-1):0]counter		//  Output as 'net' type
+	output reg [(Nbits-1):0]counter	// Output as 'reg' type
+//	output [(Nbits-1):0]counter		//  Output as 'net' type
 ); 
 
 //******************* Auxiliary cables **********************--
 //***********************************************************--
 
-reg [(Dwidth-1):0]reg1,reg2;
+reg [(Nbits-1):0]reg1,reg2;
 wire e0,e1;
-wire [(Dwidth-1):0]qout;
+wire [(Nbits-1):0]qout;
 
 
 //***************** Module Instantiation ********************--
@@ -275,7 +275,7 @@ endmodule
 </p>
 
 ## TestBench Configuration
-### TestBench Code
+### TestBench VHDL Code
 ```
 --******************* LIBRARY DEFINITION ********************--
 --***********************************************************--
@@ -284,7 +284,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 ------------------------------------
 ENTITY SynchBinCount_tb IS
-	GENERIC	(	N				:	INTEGER	:= 4);
+	GENERIC	(	Nbits				:	INTEGER	:= 4);
 	
 	END ENTITY;
 ------------------------------------
@@ -295,7 +295,7 @@ ARCHITECTURE rt1 OF SynchBinCount_tb IS
 	SIGNAL	clk_tb      	: STD_LOGIC := '0';
 	SIGNAL	rst_tb			: STD_LOGIC;
 	SIGNAL	ena_tb			: STD_LOGIC;
-	SIGNAL	counter_tb		: STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+	SIGNAL	counter_tb		: STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
 
 	
 BEGIN
@@ -344,7 +344,52 @@ signal_generation: PROCESS
 	
 END ARCHITECTURE;
 ```
+### TestBench Verilog Code
+```
+module SynchBinCount_tb
+#(parameter Nbits = 4 // #bits
+);
+   reg clk_tb;            				// Clock
+   reg rst_tb;          				// Reset
+   reg ena_tb;         			 		// Enable
+	wire [(Nbits-1):0]counter_tb;	// Output as 'reg' type
 
+// 50MHz clock generation
+initial clk_tb = 0;
+always #10 clk_tb = ~clk_tb;
+
+SynchBinCount DUT(.clk(clk_tb), .rst(rst_tb),.ena(ena_tb),.counter(counter_tb));
+
+	
+initial begin
+
+		// TEST VECTOR 1
+		rst_tb	= 1;
+		ena_tb	= 0;
+		#50;
+		
+		// TEST VECTOR 2
+		rst_tb	  <= 0;
+		ena_tb	  <= 1;
+		#200;
+		
+		// TEST VECTOR 3
+		rst_tb	  <= 0;
+		ena_tb	  <= 1;
+		#200;
+		
+		// TEST VECTOR 4
+		rst_tb	  <= 0;
+		ena_tb	  <= 1;
+		#200;	
+		
+		// TEST VECTOR 5
+		rst_tb	  <= 0;
+		ena_tb	  <= 1;
+		#200;
+end
+endmodule
+```
 ## Simulation
 <p align="center">
     <kbd>
