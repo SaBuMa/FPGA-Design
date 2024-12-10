@@ -6,7 +6,11 @@ For this scenario, a **Synchronous Binary Counter** that both *count up* and *co
 <p align="Center">
     <kbd>
         <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="580" />
-		<img src="SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Block Dia" width="580" />
+    </kbd>
+</p>
+<p align="Center">
+    <kbd>
+	<img src="SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
