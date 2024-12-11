@@ -1,4 +1,4 @@
-//**************** Synchronous Binary Counter ***************--
+//************** Synchronous Binary Counter Up **************--
 //***********************************************************--
 
 //**************** Module Inputs and Outputs ****************--
@@ -21,6 +21,7 @@ reg [(Nbits-1):0]reg1,reg2;
 wire e0,e1;
 wire [(Nbits-1):0]qout;
 
+localparam [(Nbits-1):0]ZEROS = 0; 
 
 //***************** Module Instantiation ********************--
 //***********************************************************--
@@ -47,8 +48,8 @@ assign e1 = qout[0] & qout[1] & qout[2];
 //***********************************************************--
 //always @(posedge clk)
 //begin
-//	if(rst==0)
-//		reg1 = "0000";
+//	if(rst==1)
+//		reg1 = ZEROS;
 //	else if (clk)
 //		if (ena == 1)
 //			reg1 =  reg2 + 1;
