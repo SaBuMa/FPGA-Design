@@ -10,7 +10,7 @@ module SynchBinCount_tb
 initial clk_tb = 0;
 always #10 clk_tb = ~clk_tb;
 // Declaring the Device Under Test and also changing the number of bits to be used
-SynchBinCount #(.Nbits(Nbits)) DUT(.clk(clk_tb), .rst(rst_tb),.ena(ena_tb),.counter(counter_tb));
+SynchBinCountDwn #(.Nbits(Nbits)) DUT(.clk(clk_tb), .rst(rst_tb),.ena(ena_tb),.counter(counter_tb));
 
 	
 initial begin
