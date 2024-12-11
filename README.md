@@ -42,11 +42,18 @@ The circuits implemented are:
 <p align="Center">
     <a href="SynchBinCount/readme.md">
         <kbd>
-            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCount_Block.png" alt="Synchronous Binary Counter" width="350"/> 
+            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCount_Block.png" alt="Synchronous Binary Counter Up" width="350"/> 
         </kbd>
     </a>
 </p>
 
+<p align="Center">
+    <a href="SynchBinCount/readme.md">
+        <kbd>
+            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Synchronous Binary Counter Down" width="350"/> 
+        </kbd>
+    </a>
+</p>
 ## RAM
 ## FSM
 ## ALU
