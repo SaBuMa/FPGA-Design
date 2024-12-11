@@ -8,21 +8,11 @@ For this scenario, a **Synchronous Binary Counter** that both *count up* and *co
         <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="580" />
     </kbd>
 </p>
-<p align="center">
-    <b>
-       Synchronous Binary Counter Up
-    </b>
-</p>
 
 <p align="Center">
     <kbd>
 	<img src="SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Block Dia" width="580" />
     </kbd>
-</p>
-<p align="center">
-    <b>
-       Synchronous Binary Counter Down
-    </b>
 </p>
 
 ## Hardware used
