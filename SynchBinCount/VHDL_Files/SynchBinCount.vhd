@@ -1,4 +1,4 @@
---**************** Synchronous Binary Counter ***************--
+--************** Synchronous Binary Counter Up **************--
 --***********************************************************--
 
 --******************* LIBRARY DEFINITION ********************--
@@ -80,7 +80,7 @@ e3	<=	NOT e0;
 --							count_s + 1			WHEN	(ena = '1')		ELSE
 --							count_s;
 --	PROCESS (clk,rst)
---		VARIABLE	temp	:	UNSIGNED(N-1 DOWNTO 0);
+--		VARIABLE	temp	:	UNSIGNED(Nbits-1 DOWNTO 0);
 --	BEGIN
 --		IF(rst = '1') THEN
 --			temp :=	(OTHERS => '0');
