@@ -61,7 +61,7 @@ For this scenario, a **Synchronous Binary Counter** that both *count up* and *co
   </i>
 </p>
 
-## [VHDL](VHDL_Files)
+## [VHDL Up/Down/Load](VHDL_Files)
 ### Synchronous Binary Counter Up VHDL Code
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
@@ -164,7 +164,7 @@ e3	<=	NOT e0;
 END ARCHITECTURE;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
-### VHDL RTL
+### VHDL Up RTL
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
@@ -291,7 +291,7 @@ e3	<=	NOT e0;
 END ARCHITECTURE;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
-### VHDL RTL
+### VHDL Down RTL
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
@@ -308,6 +308,161 @@ END ARCHITECTURE;
 <p align="center">
     <kbd>
         <img src="SynchBinCount_Img/SynchBinCountDwn_VHDL_Parameterized.png" alt="SynchBinCountDwn_VHDL_Parameterized" width="500"/>  
+    </kbd>
+</p>
+<p align="center">
+    <b>
+       RTL Parameterized Description
+    </b>
+</p>
+
+### Synchronous Binary Counter Up/Down/Load VHDL Code
+For the code, **VHDL 2008** was used in order to allow comments using "--"  
+```
+--********* Synchronous Binary Counter UP/Down/Load *********--
+--***********************************************************--
+
+--******************* LIBRARY DEFINITION ********************--
+--***********************************************************--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+--***************** ENITY = Inputs Outputs ******************--
+--***********************************************************--
+ENTITY SynchBinCountUD IS
+	GENERIC	(	Nbits				:	INTEGER	:= 4);
+	PORT 		(	clk			: 	IN		STD_LOGIC;
+					rst			: 	IN		STD_LOGIC;
+					ena			: 	IN		STD_LOGIC;
+					Data			: 	IN		STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0);
+					UpDwn			: 	IN		STD_LOGIC;
+					Load			: 	IN		STD_LOGIC;
+					counter		: 	OUT	STD_LOGIC_VECTOR(Nbits-1 DOWNTO 0));
+END ENTITY;
+
+--************ INTERCONNECTION BETWEEN SIGNALS **************--
+--***********************************************************--
+ARCHITECTURE rt1 OF SynchBinCountUD IS
+
+--******************* Auxiliary cables **********************--
+--***********************************************************--
+	CONSTANT ONES			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '1');
+	CONSTANT ZEROS			:	UNSIGNED (Nbits-1 DOWNTO 0)	:=	(OTHERS => '0');
+	-- SIGNAL count_s		:	INTEGER RANGE 0 to (2**N-1);
+	
+	SIGNAL count_s			:	UNSIGNED (Nbits-1 DOWNTO 0);
+	SIGNAL count_next		:	UNSIGNED (Nbits-1 DOWNTO 0);
+	
+	SIGNAL e0,e1,e2		:	STD_LOGIC;
+	SIGNAL a0,a1,a2,a3	:	STD_LOGIC;
+	SIGNAL ec0,ec1,ec2	:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
+
+--******************** Module Description *******************--
+--***********************************************************--
+BEGIN
+
+--***************** Module Instantiation ********************--
+--***********************************************************--
+
+DUT0: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		ena,
+				d		=> 	ec2(0),
+				q		=>    ec0(0));
+				
+DUT1: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e0,
+				d		=> 	ec2(1),
+				q		=>    ec0(1));
+				
+DUT2: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e1,
+				d		=> 	ec2(2),
+				q		=>    ec0(2));
+
+DUT3: ENTITY work.my_dff
+PORT MAP (	clk	=>    clk,
+				rst	=>    rst,
+				ena	=>		e2,
+				d		=> 	ec2(3),
+				q		=>    ec0(3));
+
+
+a0<=ec0(1) AND ec0(0);
+a1<=ec1(1) AND ec1(0);
+a2<=(ec0(2) AND ec0(1) AND ec0(0));
+a3<=(ec1(2) AND ec1(1) AND ec1(0));
+				
+counter <= ec0;
+
+ec1	<=	NOT ec0;
+
+ec2	<=	ec1		WHEN Load = '0'	ELSE
+			Data;
+			
+e0		<= ec0(0) 	WHEN UpDwn = '1' AND Load = '0'	ELSE	
+			ec1(0)	WHEN UpDwn = '0' AND Load = '0'	ELSE
+			'1';
+			
+e1		<= a0			WHEN UpDwn = '1' AND Load = '0'	ELSE
+			a1			WHEN UpDwn = '0' AND Load = '0'	ELSE
+			'1';
+			
+e2		<= a2			WHEN UpDwn = '1' AND Load = '0'	ELSE
+			a3			WHEN UpDwn = '0' AND Load = '0'	ELSE
+			'1';
+
+
+--********** Parameterized description of Counter ***********--
+--***********************************************************--
+--
+--	-- NEXT STATE LOGIC
+--	count_next	<=		(OTHERS => '0')	WHEN	(rst = '1')							ELSE
+--							UNSIGNED(Data)		WHEN	(ena = '1' AND Load = '1')		ELSE
+--							count_s + 1			WHEN	(ena = '1' AND UpDwn = '1')	ELSE
+--							count_s - 1			WHEN	(ena = '1' AND UpDwn = '0')	ELSE
+--							count_s;
+--	PROCESS (clk,rst)
+--		VARIABLE	temp	:	UNSIGNED(Nbits-1 DOWNTO 0);
+--	BEGIN
+--		IF(rst = '1') THEN
+--			temp :=	(OTHERS => '0');
+--		ELSIF (rising_edge(clk)) THEN
+--			IF (ena = '1') THEN
+--				temp := count_next;
+--			END IF;
+--		END IF;
+--		counter <=	STD_LOGIC_VECTOR(temp);
+--		count_s <=	temp;
+--	END PROCESS;
+
+
+END ARCHITECTURE;
+```
+[comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
+### VHDL Up/Down/Load RTL
+**1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
+<p align="center">
+    <kbd>
+        <img src="SynchBinCount_Img/SynchBinCountUpDwn_VHDL_FlipFlop.png" alt="SynchBinCountUpDwn_VHDL_FlipFlop" width="500"/> 
+    </kbd>
+</p>
+<p align="center">
+    <b>
+       RTL D-Type FlipFlop Instantiation
+    </b>
+</p>
+
+**2.** This second image represent the **Synchronous Binary Counter** being Parameterized
+<p align="center">
+    <kbd>
+        <img src="SynchBinCount_Img/SynchBinCountUpDwn_VHDL_Parameterized.png" alt="SynchBinCountUpDwn_VHDL_Parameterized" width="500"/>  
     </kbd>
 </p>
 <p align="center">
