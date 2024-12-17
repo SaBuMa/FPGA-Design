@@ -2,7 +2,7 @@
 For this scenario, a **Synchronous Binary Counter** that both *count up* and *counts down*, is being implemented using **logic gates**, **FlipFlops**, **"instantiation"**, and **Parametrization**.  
  Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog** languages. With the use of Quartus one can check the VHDL or Verilog code implementation does in fact recreate the circuit in question looking at the **RTL model** created by Quartus.
 
-## Block Diagram
+## Block Diagrams
 <p align="Center">
     <kbd>
         <img src="SynchBinCount_Img/SynchBinCount_Block.png" alt="Block Dia" width="580" />
@@ -12,6 +12,12 @@ For this scenario, a **Synchronous Binary Counter** that both *count up* and *co
 <p align="Center">
     <kbd>
 	<img src="SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Block Dia" width="580" />
+    </kbd>
+</p>
+
+<p align="Center">
+    <kbd>
+	<img src="SynchBinCount_Img/SynchBinCountUpDwn_Block.png" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
@@ -61,8 +67,8 @@ For this scenario, a **Synchronous Binary Counter** that both *count up* and *co
   </i>
 </p>
 
-## [VHDL Up/Down/Load](VHDL_Files)
-### Synchronous Binary Counter Up VHDL Code
+## [VHDL Up - Down - Up/Down/Load](VHDL_Files)
+### Synchronous Binary Counter Up (VHDL Code)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --************** Synchronous Binary Counter Up **************--
@@ -189,7 +195,7 @@ END ARCHITECTURE;
     </b>
 </p>
 
-### Synchronous Binary Counter Down VHDL Code
+### Synchronous Binary Counter Down (VHDL Code)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --************* Synchronous Binary Counter Down *************--
@@ -316,7 +322,7 @@ END ARCHITECTURE;
     </b>
 </p>
 
-### Synchronous Binary Counter Up/Down/Load VHDL Code
+### Synchronous Binary Counter Up/Down/Load (VHDL Code)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --********* Synchronous Binary Counter UP/Down/Load *********--
@@ -354,9 +360,10 @@ ARCHITECTURE rt1 OF SynchBinCountUD IS
 	SIGNAL count_s			:	UNSIGNED (Nbits-1 DOWNTO 0);
 	SIGNAL count_next		:	UNSIGNED (Nbits-1 DOWNTO 0);
 	
-	SIGNAL e0,e1,e2		:	STD_LOGIC;
-	SIGNAL a0,a1,a2,a3	:	STD_LOGIC;
-	SIGNAL ec0,ec1,ec2	:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
+	SIGNAL negate			:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
+	SIGNAL aux_a,aux_b	:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0); -- Auxiliary Variables
+	SIGNAL enables			:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
+	SIGNAL ec0,ec1			:	STD_LOGIC_VECTOR (Nbits-1 DOWNTO 0);
 
 --******************** Module Description *******************--
 --***********************************************************--
@@ -368,57 +375,70 @@ BEGIN
 DUT0: ENTITY work.my_dff
 PORT MAP (	clk	=>    clk,
 				rst	=>    rst,
-				ena	=>		ena,
-				d		=> 	ec2(0),
+				ena	=>		enables(0),
+				d		=> 	ec1(0),
 				q		=>    ec0(0));
 				
 DUT1: ENTITY work.my_dff
 PORT MAP (	clk	=>    clk,
 				rst	=>    rst,
-				ena	=>		e0,
-				d		=> 	ec2(1),
+				ena	=>		enables(1),
+				d		=> 	ec1(1),
 				q		=>    ec0(1));
 				
 DUT2: ENTITY work.my_dff
 PORT MAP (	clk	=>    clk,
 				rst	=>    rst,
-				ena	=>		e1,
-				d		=> 	ec2(2),
+				ena	=>		enables(2),
+				d		=> 	ec1(2),
 				q		=>    ec0(2));
 
 DUT3: ENTITY work.my_dff
 PORT MAP (	clk	=>    clk,
 				rst	=>    rst,
-				ena	=>		e2,
-				d		=> 	ec2(3),
+				ena	=>		enables(3),
+				d		=> 	ec1(3),
 				q		=>    ec0(3));
 
 
-a0<=ec0(1) AND ec0(0);
-a1<=ec1(1) AND ec1(0);
-a2<=(ec0(2) AND ec0(1) AND ec0(0));
-a3<=(ec1(2) AND ec1(1) AND ec1(0));
-				
+aux_a(0)	<=	ec0(0) AND ec0(1);
+aux_a(1)	<=	negate(0) AND negate(1);
+aux_a(2)	<=	(ec0(0) AND ec0(1) AND ec0(2));
+aux_a(3)	<=	(negate(0) AND negate(1) AND negate(2));
+
+-- Output			
 counter <= ec0;
 
-ec1	<=	NOT ec0;
+-- Negative of output
+negate	<=	NOT ec0;
 
-ec2	<=	ec1		WHEN Load = '0'	ELSE
-			Data;
+-- Data to all registers
+ec1	<=	Data		WHEN Load = '1'	ELSE
+			negate;
 			
-e0		<= ec0(0) 	WHEN UpDwn = '1' AND Load = '0'	ELSE	
-			ec1(0)	WHEN UpDwn = '0' AND Load = '0'	ELSE
-			'1';
-			
-e1		<= a0			WHEN UpDwn = '1' AND Load = '0'	ELSE
-			a1			WHEN UpDwn = '0' AND Load = '0'	ELSE
-			'1';
-			
-e2		<= a2			WHEN UpDwn = '1' AND Load = '0'	ELSE
-			a3			WHEN UpDwn = '0' AND Load = '0'	ELSE
-			'1';
+-- Logic Gates to enable Up/Down count on Registe 1			
+aux_b(0)		<= ec0(0) 	WHEN UpDwn = '1'	ELSE	
+					negate(0);
+					
+-- Logic Gates to enable Up/Down count on Registe 2		
+aux_b(1)		<= aux_a(0)			WHEN UpDwn = '1'	ELSE
+					aux_a(1);
+					
+-- Logic Gates to enable Up/Down count on Registe 3			
+aux_b(2)		<= aux_a(2)			WHEN UpDwn = '1'	ELSE
+					aux_a(3);
+					
+-- Enables for each of the registers
+enables(0)	<= Load OR ena;
 
+enables(1)	<= '1'			WHEN Load = '1'	ELSE
+					aux_b(0);
 
+enables(2)	<= '1'			WHEN Load = '1'	ELSE
+					aux_b(1);
+			
+enables(3)	<= '1'			WHEN Load = '1'	ELSE
+					aux_b(2);
 --********** Parameterized description of Counter ***********--
 --***********************************************************--
 --
@@ -786,11 +806,22 @@ endmodule
 
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountDwn_Simu.png" alt="SynchBinCount_Simu"/>  
+        <img src="SynchBinCount_Img/SynchBinCountDwn_Simu.png" alt="SynchBinCountDwn_Simu"/>  
     </kbd>
 </p>
 <p align="center">
     <b>
        Simulation Results for Counter Down
+    </b>
+</p>
+
+<p align="center">
+    <kbd>
+        <img src="SynchBinCount_Img/SynchBinCountUpDwn_Simu.png" alt="SynchBinCountUpDwn_Simu"/>  
+    </kbd>
+</p>
+<p align="center">
+    <b>
+       Simulation Results for Counter Up/Down/Load
     </b>
 </p>
