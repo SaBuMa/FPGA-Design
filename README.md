@@ -38,9 +38,9 @@ The circuits implemented are:
 </p>
 
 
-## [Synchronous Binary Counter](SynchBinCount)
+## [Synchronous Binary Counter](SynchronousBinaryCounter)
 <p align="Center">
-    <a href="SynchBinCount/readme.md">
+    <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
             <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUp_Block.png" alt="Synchronous Binary Counter Up" width="350"/> 
         </kbd>
@@ -48,7 +48,7 @@ The circuits implemented are:
 </p>
 
 <p align="Center">
-    <a href="SynchBinCount/readme.md">
+    <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
             <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Synchronous Binary Counter Down" width="350"/> 
         </kbd>
@@ -56,7 +56,7 @@ The circuits implemented are:
 </p>
 
 <p align="Center">
-    <a href="SynchBinCount/readme.md">
+    <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
             <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUpDwnLo_Block.png" alt="Synchronous Binary Counter Up/Down/Load" width="350"/> 
         </kbd>
