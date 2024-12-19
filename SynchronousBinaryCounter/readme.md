@@ -306,7 +306,7 @@ END ARCHITECTURE;
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountDwn_FlipFlop_VHDL.png" alt="SynchBinCountDwn_FlipFlop_VHDL" width="500"/> 
+        <img src="SynchBinCount_Img/SynchBinCountDwn_FlipFlop_VHDL.svg" alt="SynchBinCountDwn_FlipFlop_VHDL" width="500"/> 
     </kbd>
 </p>
 <p align="center">
