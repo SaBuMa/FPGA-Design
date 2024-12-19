@@ -1,9 +1,10 @@
 # Synchronous Binary Counters
 * For this scenario, multiple **Synchronous Binary Counters** that ***count up***, ***counts down*** and performs a ***Load*** operation, are being implemented using **logic gates**, **FlipFlops**, **instantiation**, and **Parameterization**.  
 
-* Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog** languages. With the use of Quartus one can check the VHDL or Verilog code implementation does in fact recreate the circuit in question looking at the **RTL model** created by Quartus.  
- 
+ * Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog** languages. With the use of Quartus one can check the VHDL or Verilog code implementation does in fact recreate the circuit in question looking at the **RTL model** created by Quartus.  
+
 * Finally to verify that the counters are working as expected a **testbench** and simulation in **Questa** is done. 
+
 ## Block Diagrams
 <p align="Center">
     <kbd>
@@ -177,7 +178,7 @@ END ARCHITECTURE;
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_FlipFlop_VHDL.png" alt="SynchBinCountUp_FlipFlop_VHDL" width="500"/> 
+        <img src="SynchBinCount_Img/SynchBinCountUp_FlipFlop_VHDL.svg" alt="SynchBinCountUp_FlipFlop_VHDL" width="500"/> 
     </kbd>
 </p>
 <p align="center">
@@ -189,7 +190,7 @@ END ARCHITECTURE;
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_VHDL.png" alt="SynchBinCountUp_Parameterization_VHDL" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_VHDL.svg" alt="SynchBinCountUp_Parameterization_VHDL" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -318,7 +319,7 @@ END ARCHITECTURE;
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountDwn_Parameterization_VHDL.png" alt="SynchBinCountDwn_Parameterization_VHDL" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountDwn_Parameterization_VHDL.svg" alt="SynchBinCountDwn_Parameterization_VHDL" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -475,7 +476,7 @@ END ARCHITECTURE;
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_FlipFlop_VHDL.png" alt="SynchBinCountUpDwnLo_FlipFlop_VHDL" width="500"/> 
+        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_FlipFlop_VHDL.svg" alt="SynchBinCountUpDwnLo_FlipFlop_VHDL" width="500"/> 
     </kbd>
 </p>
 <p align="center">
@@ -487,7 +488,7 @@ END ARCHITECTURE;
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Parameterization_VHDL.png" alt="SynchBinCountUpDwnLo_Parameterization_VHDL" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Parameterization_VHDL.svg" alt="SynchBinCountUpDwnLo_Parameterization_VHDL" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -576,7 +577,7 @@ endmodule
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_FlipFlop_Verilog.png" alt="SynchBinCountUp_FlipFlop_Verilog" width="500"/>
+        <img src="SynchBinCount_Img/SynchBinCountUp_FlipFlop_Verilog.svg" alt="SynchBinCountUp_FlipFlop_Verilog" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -588,7 +589,7 @@ endmodule
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_Verilog.png" alt="SynchBinCountUp_Parameterization_Verilog" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_Verilog.svg" alt="SynchBinCountUp_Parameterization_Verilog" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -677,7 +678,7 @@ endmodule
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountDwn_FlipFlop_Verilog.png" alt="SynchBinCountDwn_FlipFlop_Verilog" width="500"/>
+        <img src="SynchBinCount_Img/SynchBinCountDwn_FlipFlop_Verilog.svg" alt="SynchBinCountDwn_FlipFlop_Verilog" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -689,7 +690,7 @@ endmodule
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountDwn_Parameterization_Verilog.png" alt="SynchBinCountDwn_Parameterization_Verilog" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountDwn_Parameterization_Verilog.svg" alt="SynchBinCountDwn_Parameterization_Verilog" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -919,7 +920,7 @@ endmodule
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_FlipFlop_Verilog.png" alt="SynchBinCountUpDwnLo_FlipFlop_Verilog" width="500"/>
+        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_FlipFlop_Verilog.svg" alt="SynchBinCountUpDwnLo_FlipFlop_Verilog" width="500"/>
     </kbd>
 </p>
 <p align="center">
@@ -931,7 +932,7 @@ endmodule
 **2.** This second image represent the **Synchronous Binary Counter** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Parameterization_Verilog.png" alt="SynchBinCountUpDwnLo_Parameterization_Verilog" width="500"/>  
+        <img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Parameterization_Verilog.svg" alt="SynchBinCountUpDwnLo_Parameterization_Verilog" width="500"/>  
     </kbd>
 </p>
 <p align="center">
@@ -940,7 +941,8 @@ endmodule
     </b>
 </p>
 
-## TestBench Configuration
+## Test Benches
+### Configuration
 * For both the Count **Up and Down** counters, the testbench file is the same.
 * For the Count **UpDownLoad** Counter the testbench includes the load function and the count up and down from the load value
 
@@ -1134,6 +1136,7 @@ signal_generation: PROCESS
 	
 END ARCHITECTURE;
 ```
+## Testbenches Verilog
 ### TestBench Verilog Code Up - Down Counters
 ```
 module SynchBinCount_tb
