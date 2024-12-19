@@ -42,7 +42,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="SynchBinCount/readme.md">
         <kbd>
-            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCount_Block.png" alt="Synchronous Binary Counter Up" width="350"/> 
+            <img src="SynchBinCount/SynchBinCount_Img/SynchBinCountUp_Block.png" alt="Synchronous Binary Counter Up" width="350"/> 
         </kbd>
     </a>
 </p>
