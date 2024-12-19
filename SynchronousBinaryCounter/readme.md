@@ -7,19 +7,19 @@
 ## Block Diagrams
 <p align="Center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_Block.png" alt="Block Dia" width="580" />
+        <img src="SynchBinCount_Img/SynchBinCountUp_Block.svg" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
 <p align="Center">
     <kbd>
-	<img src="SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Block Dia" width="580" />
+	<img src="SynchBinCount_Img/SynchBinCountDwn_Block.svg" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
 <p align="Center">
     <kbd>
-	<img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Block.png" alt="Block Dia" width="580" />
+	<img src="SynchBinCount_Img/SynchBinCountUpDwnLo_Block.svg" alt="Block Dia" width="580" />
     </kbd>
 </p>
 
