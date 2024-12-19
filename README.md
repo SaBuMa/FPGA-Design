@@ -42,7 +42,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
-            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUp_Block.png" alt="Synchronous Binary Counter Up" width="350"/> 
+            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUp_Block.svg" alt="Synchronous Binary Counter Up" width="350"/> 
         </kbd>
     </a>
 </p>
@@ -50,7 +50,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
-            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountDwn_Block.png" alt="Synchronous Binary Counter Down" width="350"/> 
+            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountDwn_Block.svg" alt="Synchronous Binary Counter Down" width="350"/> 
         </kbd>
     </a>
 </p>
@@ -58,7 +58,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="SynchronousBinaryCounter/readme.md">
         <kbd>
-            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUpDwnLo_Block.png" alt="Synchronous Binary Counter Up/Down/Load" width="350"/> 
+            <img src="SynchronousBinaryCounter/SynchBinCount_Img/SynchBinCountUpDwnLo_Block.svg" alt="Synchronous Binary Counter Up/Down/Load" width="350"/> 
         </kbd>
     </a>
 </p>
