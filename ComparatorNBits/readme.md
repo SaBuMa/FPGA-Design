@@ -4,7 +4,7 @@ For this scenario, an **N Bit Comparator** is being implemented using **logic ga
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="CNB_Img/CNB_Block.png" alt="Block Dia" width="380" />
+        <img src="CNB_Img/CNB_Block.svg" alt="Block Dia" width="380" />
     </kbd>
 </p>
 
