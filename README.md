@@ -23,7 +23,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="ComparatorOneBit/readme.md">
         <kbd>
-            <img src="ComparatorOneBit/COB_Img/COB_Block.png" alt="COB" width="350"/> 
+            <img src="ComparatorOneBit/COB_Img/COB_Block.svg" alt="COB" width="350"/> 
         </kbd>
     </a>
 </p>
@@ -32,7 +32,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="ComparatorNBits/readme.md">
         <kbd>
-            <img src="ComparatorNBits/CNB_Img/CNB_Block.png" alt="CNB" width="350"/> 
+            <img src="ComparatorNBits/CNB_Img/CNB_Block.svg" alt="CNB" width="350"/> 
         </kbd>
     </a>
 </p>
