@@ -4,7 +4,7 @@ For this scenario, an **N Bit Full Adder** is being implemented using **logic ga
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="FANB_Img/FullAdderNBits.png" alt="Block" width="750"/> 
+        <img src="FANB_Img/FullAdderNBits.svg" alt="Block" width="750"/> 
     </kbd>
 </p>
 
