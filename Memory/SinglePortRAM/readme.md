@@ -21,10 +21,10 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
+        <img src="../../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
     </kbd>
     <kbd>
-        <img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
+        <img src="../../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
     </kbd>
 </p>
 
@@ -36,7 +36,7 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
+        <img src="../../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
     </kbd>
 <p align ="center" >
     <i>
@@ -50,7 +50,7 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
+        <img src="../../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
     </kbd>
 </p>
 <p align="center">
