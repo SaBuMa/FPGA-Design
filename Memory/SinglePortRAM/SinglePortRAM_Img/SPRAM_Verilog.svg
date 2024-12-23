@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 792 329.49">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-1, .cls-4, .cls-5 {
+        stroke-width: 1.22px;
+      }
+
+      .cls-1, .cls-7 {
+        stroke: blue;
+      }
+
+      .cls-8 {
+        opacity: .41;
+      }
+
+      .cls-9, .cls-10 {
+        fill: #06476f;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-12 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-9, .cls-11, .cls-12 {
+        font-size: 14.64px;
+      }
+
+      .cls-13, .cls-12 {
+        fill: #2d2d2d;
+      }
+
+      .cls-14 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #06476f;
+      }
+
+      .cls-2, .cls-6, .cls-7 {
+        stroke-width: 3.66px;
+      }
+
+      .cls-10 {
+        font-size: 12.2px;
+      }
+
+      .cls-15 {
+        fill: #b3a9fe;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #2d2d2d;
+      }
+
+      .cls-16 {
+        fill: #73acac;
+      }
+
+      .cls-17 {
+        fill: #477777;
+      }
+
+      .cls-18 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-3" width="792" height="329.49"/>
+    </clipPath>
+  </defs>
+  <g class="cls-18">
+    <rect class="cls-14" width="790.78" height="330.71"/>
+    <polygon class="cls-7" points="157.42 85.42 148.88 93.97 131.8 93.97 131.8 76.88 148.88 76.88 157.42 85.42"/>
+    <text class="cls-11" transform="translate(24.36 90.68)"><tspan x="0" y="0">Data_write[7..0]</tspan></text>
+    <polygon class="cls-1" points="157.42 183.05 148.88 191.59 131.8 191.59 131.8 174.51 148.88 174.51 157.42 183.05"/>
+    <text class="cls-11" transform="translate(57.74 188.31)"><tspan x="0" y="0">wr_rd_ena</tspan></text>
+    <polygon class="cls-7" points="157.42 207.46 148.88 216 131.8 216 131.8 198.92 148.88 198.92 157.42 207.46"/>
+    <text class="cls-11" transform="translate(65.04 212.72)"><tspan x="0" y="0">addr[1..0]</tspan></text>
+    <polygon class="cls-1" points="157.42 231.86 148.88 240.41 131.8 240.41 131.8 223.32 148.88 223.32 157.42 231.86"/>
+    <text class="cls-11" transform="translate(109.02 237.12)"><tspan x="0" y="0">clk</tspan></text>
+    <rect class="cls-8" x="277.02" y="229.42" width="73.22" height="97.63"/>
+    <rect class="cls-17" x="272.14" y="224.54" width="73.22" height="97.63"/>
+    <rect class="cls-5" x="272.14" y="224.54" width="73.22" height="97.63"/>
+    <rect class="cls-16" x="267.25" y="219.66" width="73.22" height="97.63"/>
+    <rect class="cls-5" x="267.25" y="219.66" width="73.22" height="97.63"/>
+    <polyline class="cls-5" points="267.25 272.14 275.8 268.47 267.25 264.81"/>
+    <text class="cls-11" transform="translate(258.28 214.19)"><tspan x="0" y="0">addr_reg[1..0]</tspan></text>
+    <line class="cls-2" x1="255.05" y1="244.07" x2="267.25" y2="244.07"/>
+    <text class="cls-10" transform="translate(269.69 248.45)"><tspan x="0" y="0">D</tspan></text>
+    <line class="cls-2" x1="255.05" y1="268.47" x2="267.25" y2="268.47"/>
+    <text class="cls-10" transform="translate(278.24 272.86)"><tspan x="0" y="0">CLK</tspan></text>
+    <line class="cls-2" x1="255.05" y1="292.88" x2="267.25" y2="292.88"/>
+    <text class="cls-10" transform="translate(269.69 297.26)"><tspan x="0" y="0">SCLR</tspan></text>
+    <text class="cls-9" transform="translate(237.14 288.63)"><tspan x="0" y="0">2&apos;h0</tspan></text>
+    <line class="cls-2" x1="352.68" y1="268.47" x2="340.47" y2="268.47"/>
+    <text class="cls-10" transform="translate(328.54 272.86)"><tspan x="0" y="0">Q</tspan></text>
+    <rect class="cls-8" x="456.41" y="30.51" width="146.44" height="170.85"/>
+    <rect class="cls-15" x="450.31" y="24.41" width="146.44" height="170.85"/>
+    <rect class="cls-5" x="450.31" y="24.41" width="146.44" height="170.85"/>
+    <text class="cls-11" transform="translate(510.92 18.94)"><tspan x="0" y="0">ram</tspan></text>
+    <text class="cls-12" transform="translate(482.84 213.09)"><tspan x="0" y="0">SYNC_RAM</tspan></text>
+    <line class="cls-4" x1="438.1" y1="183.05" x2="450.31" y2="183.05"/>
+    <text class="cls-10" transform="translate(452.75 187.43)"><tspan x="0" y="0">WE</tspan></text>
+    <line class="cls-4" x1="438.1" y1="36.61" x2="450.31" y2="36.61"/>
+    <text class="cls-10" transform="translate(452.75 40.99)"><tspan x="0" y="0">CLK0</tspan></text>
+    <line class="cls-4" x1="438.1" y1="109.83" x2="450.31" y2="109.83"/>
+    <text class="cls-10" transform="translate(452.75 114.21)"><tspan x="0" y="0">ENA1</tspan></text>
+    <text class="cls-9" transform="translate(420.19 105.58)"><tspan x="0" y="0">1&apos;h1</tspan></text>
+    <line class="cls-4" x1="438.1" y1="61.02" x2="450.31" y2="61.02"/>
+    <text class="cls-10" transform="translate(452.75 65.4)"><tspan x="0" y="0">CLR1</tspan></text>
+    <text class="cls-9" transform="translate(420.19 56.77)"><tspan x="0" y="0">1&apos;h0</tspan></text>
+    <line class="cls-2" x1="438.1" y1="85.42" x2="450.31" y2="85.42"/>
+    <text class="cls-10" transform="translate(452.75 89.81)"><tspan x="0" y="0">DATAIN[7..0]</tspan></text>
+    <line class="cls-2" x1="438.1" y1="158.64" x2="450.31" y2="158.64"/>
+    <text class="cls-10" transform="translate(452.75 163.03)"><tspan x="0" y="0">WADDR[1..0]</tspan></text>
+    <line class="cls-2" x1="438.1" y1="134.24" x2="450.31" y2="134.24"/>
+    <text class="cls-10" transform="translate(452.75 138.62)"><tspan x="0" y="0">RADDR[1..0]</tspan></text>
+    <line class="cls-2" x1="608.95" y1="109.83" x2="596.75" y2="109.83"/>
+    <text class="cls-10" transform="translate(508.86 114.21)"><tspan x="0" y="0">DATAOUT[7..0]</tspan></text>
+    <polygon class="cls-7" points="633.36 109.83 633.36 101.29 650.44 101.29 658.98 109.83 650.44 118.37 633.36 118.37 633.36 109.83"/>
+    <text class="cls-11" transform="translate(668.75 115.09)"><tspan x="0" y="0">Data_read[7..0]</tspan></text>
+    <line class="cls-6" x1="608.95" y1="109.83" x2="633.36" y2="109.83"/>
+    <polyline class="cls-5" points="255.05 268.47 181.83 268.47 181.83 36.61 438.1 36.61"/>
+    <line class="cls-5" x1="157.42" y1="231.86" x2="181.83" y2="231.86"/>
+    <rect class="cls-13" x="179.39" y="229.42" width="6.1" height="6.1"/>
+    <line class="cls-5" x1="157.42" y1="183.05" x2="438.1" y2="183.05"/>
+    <polyline class="cls-6" points="255.05 244.07 206.24 244.07 206.24 158.64 438.1 158.64"/>
+    <line class="cls-6" x1="157.42" y1="207.46" x2="206.24" y2="207.46"/>
+    <rect class="cls-13" x="202.58" y="203.8" width="8.54" height="8.54"/>
+    <line class="cls-6" x1="157.42" y1="85.42" x2="438.1" y2="85.42"/>
+    <polyline class="cls-6" points="352.68 268.47 389.29 268.47 389.29 134.24 438.1 134.24"/>
+  </g>
+</svg>
