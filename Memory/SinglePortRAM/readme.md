@@ -123,7 +123,7 @@ END ARCHITECTURE;
 **1.** This image represent the **Single Port RAM** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SinglePortRAM_Img/SinglePortRAM_VHDL.svg" alt="SinglePortRAM_VHDL" width="500"/>  
+        <img src="SinglePortRAM_Img/SPRAM_VHDL.svg" alt="SinglePortRAM_VHDL" width="500"/>  
     </kbd>
 </p>
 <p align="center">
