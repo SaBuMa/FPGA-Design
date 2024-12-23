@@ -4,7 +4,7 @@ For this scenario, a **Comparator** is being implemented using **logic gates**. 
 ## Block Diagram and Truth Table
 <p align="Center">
     <kbd>
-        <img src="COB_Img/COB_Block.png" alt="Block Dia" width="380" />
+        <img src="COB_Img/COB_Block.svg" alt="Block Dia" width="380" />
     </kbd>
     <kbd>
         <img src="COB_Img/TruthTable.png" alt="Truth Tab" width="380" />  
