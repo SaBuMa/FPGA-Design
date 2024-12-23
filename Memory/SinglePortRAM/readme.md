@@ -134,25 +134,49 @@ END ARCHITECTURE;
 
 ## [Verilog](Verilog_Files)
 ```
+//********************* Single Port RAM *********************--
+//***********************************************************--
 
+//**************** Module Inputs and Outputs ****************--
+//***********************************************************--
+module SinglePortRAM 
+#(
+  parameter Data_Width = 8, // Size of the data to be written in memory
+            Addr_Width = 2  // Size of the memory address
+)
+(  
+    input wire clk,										// Clock Input
+    input wire wr_rd_ena,								// Write/Read Enable
+    input wire [(Addr_Width-1):0] addr, 			// Address to write or read
+    input wire [(Data_Width-1):0] Data_write,	// Data to be written
+    output wire [(Data_Width-1):0] Data_read		// Data read from memory
+);
+
+//******************* Auxiliary cables **********************--
+//***********************************************************--
+reg [(Data_Width-1):0] ram [2**(Addr_Width-1):0];
+reg [(Addr_Width-1):0] addr_reg;
+
+//****************** Module Parameterization ****************--
+//***********************************************************--
+always@(posedge clk)
+	begin
+		if(wr_rd_ena == 1)
+			ram[addr] <= Data_write;
+		
+		addr_reg <= addr;
+	end
+	
+assign Data_read = ram[addr_reg];
+
+endmodule 
 ```
 ### Verilog RTL
-**1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
-<p align="center">
-    <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_FlipFlop_Verilog.svg" alt="SynchBinCountUp_FlipFlop_Verilog" width="500"/>
-    </kbd>
-</p>
-<p align="center">
-    <b>
-       RTL D-Type FlipFlop Instantiation
-    </b>
-</p>
 
-**2.** This second image represent the **Synchronous Binary Counter** being Parameterized
+**1.** This image represent the **Single Port RAM** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_Verilog.svg" alt="SynchBinCountUp_Parameterization_Verilog" width="500"/>  
+        <img src="SinglePortRAM_Img/SPRAM_Verilog.svg" alt="SinglePortRAM_Verilog" width="500"/>  
     </kbd>
 </p>
 <p align="center">
