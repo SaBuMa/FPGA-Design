@@ -14,7 +14,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="FullAdderNBits/readme.md">
         <kbd>
-            <img src="FullAdderNBits/FANB_Img/FullAdderNBits.svg" alt="FANB" width="800"/> 
+            <img src="FullAdderNBits/FANB_Img/FullAdderNBits.svg" alt="FANB" width="750"/> 
         </kbd>
     </a>
 </p>
@@ -32,7 +32,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="ComparatorNBits/readme.md">
         <kbd>
-            <img src="ComparatorNBits/CNB_Img/CNB_Block.svg" alt="CNB" width="350"/> 
+            <img src="ComparatorNBits/CNB_Img/CNB_Block.svg" alt="CNB" width="750"/> 
         </kbd>
     </a>
 </p>
