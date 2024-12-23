@@ -5,7 +5,7 @@ The circuits implemented are:
 <p align="Center">
     <a href="FullAdderOneBit/readme.md">
         <kbd>
-            <img src="FullAdderOneBit/FAOB_Img/FullAdderOneBit.png" alt="FAOB" width="350" /> 
+            <img src="FullAdderOneBit/FAOB_Img/FullAdderOneBit.svg" alt="FAOB" width="350" /> 
         </kbd>
     </a>
 </p>
