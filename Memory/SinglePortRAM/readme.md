@@ -21,10 +21,10 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
+        <img src="../FPGA_PrjImg/FPGA1.JPG" alt="FPGA BOX" width="250"/> 
     </kbd>
     <kbd>
-        <img src="../../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
+        <img src="../FPGA_PrjImg/FPGA2.JPG" alt="FPGA Board" width="250"/> 
     </kbd>
 </p>
 
@@ -36,7 +36,7 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
+        <img src="../FPGA_PrjImg/Quartus.png" alt="QuartusPrime" width="100"/> 
     </kbd>
 <p align ="center" >
     <i>
@@ -50,7 +50,7 @@
 </p>
 <p align="center">
     <kbd>
-        <img src="../../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
+        <img src="../FPGA_PrjImg/Questa.png" alt="Questa" width="100"/>  
     </kbd>
 </p>
 <p align="center">
@@ -62,6 +62,60 @@
 ## [VHDL Single Port RAM](VHDL_Files)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
+--********************* Single Port RAM *********************--
+--***********************************************************--
+
+--******************* LIBRARY DEFINITION ********************--
+--***********************************************************--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+--***************** ENITY = Inputs Outputs ******************--
+--***********************************************************--
+ENTITY SinglePortRAM IS
+	GENERIC	(	Data_Width				:	INTEGER	:= 8; -- Size of the data to be written in memory
+					Addr_Width				:	INTEGER	:= 2	-- Size of the memory address
+				);	
+	PORT 		(	clk			: 	IN		STD_LOGIC;											-- Clock Input
+					wr_rd_ena	: 	IN		STD_LOGIC;											--	Write/Read Enable
+					addr			: 	IN		STD_LOGIC_VECTOR(Addr_Width-1 DOWNTO 0);  -- Address to write or read
+					Data_write	: 	IN		STD_LOGIC_VECTOR(Data_Width-1 DOWNTO 0);  -- Data to be written
+					Data_read	: 	OUT	STD_LOGIC_VECTOR(Data_Width-1 DOWNTO 0)); -- Data read from memory
+END ENTITY;
+
+ARCHITECTURE rt1 OF SinglePortRAM IS
+
+--******************* Auxiliary cables **********************--
+--***********************************************************--
+	TYPE mem_2d IS ARRAY (0 TO 2**Addr_Width-1) OF STD_LOGIC_VECTOR(Data_Width-1 DOWNTO 0);
+	SIGNAL ram : mem_2d;
+	SIGNAL addr_reg : STD_LOGIC_VECTOR(Addr_Width-1 DOWNTO 0);
+-- Cables used in "Module Instantiation"	
+
+-- Cables used in "Module Parameterization"
+	
+BEGIN
+
+--***************** Module Instantiation ********************--
+--***********************************************************--
+
+
+					
+--********** Parameterized description of Counter ***********--
+--***********************************************************--
+WriteProcess: PROCESS (clk)
+	BEGIN
+		IF (rising_edge(clk)) THEN
+			IF (wr_rd_ena = '1') THEN
+				ram(TO_INTEGER(UNSIGNED(Addr))) <= Data_write;
+			END IF;
+			addr_reg <= addr;
+		END IF;
+	END PROCESS;
+	Data_read <= ram(TO_INTEGER(UNSIGNED(addr_reg)));
+
+END ARCHITECTURE;
 
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
@@ -69,7 +123,7 @@ For the code, **VHDL 2008** was used in order to allow comments using "--"
 **1.** This image represent the **Single Port RAM** being Parameterized
 <p align="center">
     <kbd>
-        <img src="SynchBinCount_Img/SynchBinCountUp_Parameterization_VHDL.svg" alt="SynchBinCountUp_Parameterization_VHDL" width="500"/>  
+        <img src="SinglePortRAM_Img/SinglePortRAM_VHDL.svg" alt="SinglePortRAM_VHDL" width="500"/>  
     </kbd>
 </p>
 <p align="center">
