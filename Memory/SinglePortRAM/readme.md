@@ -7,14 +7,19 @@
 * Finally to verify that the **RAM** is working as expected a **testbench** and simulation in **Questa** is done. 
 
 ## Block Diagrams
+<p align="center">
+    <b>  
+        SPRAM Representation  
+    </b>
+</p>
 <p align="Center">
     <kbd>
-        <img src="SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="580" />
+        <img src="SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="380" />
     </kbd>
 </p>
 <p align="center">
     <b>  
-        SPRAM Representation  
+        SPRAM Configuration  
     </b>
 </p>
 <p align="Center">
