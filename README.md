@@ -63,7 +63,16 @@ The circuits implemented are:
     </a>
 </p>
 
-## RAM
+## Memory
+### [Single Port RAM](Memory/SinglePortRAM)
+
+<p align="Center">
+    <a href="SynchronousBinaryCounter/readme.md">
+        <kbd>
+            <img src="Memory/SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Single Port RAM" width="350"/> 
+        </kbd>
+    </a>
+</p>
 ## FSM
 ## ALU
 ## FIFO
