@@ -8,7 +8,7 @@
     </b>
 </p>
 <p align="Center">
-    <a href="Memory/SinglePortRAM/readme.md">
+    <a href="SinglePortRAM/readme.md">
         <kbd>
             <img src="SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="380" />
         </kbd>
@@ -20,7 +20,7 @@
     </b>
 </p>
 <p align="Center">
-    <a href="Memory/SinglePortRAM/readme.md">
+    <a href="SinglePortRAM/readme.md">
         <kbd>
             <img src="SinglePortRAM/SinglePortRAM_Img/SPRAM_CONFIG.png" alt="Representation" width="580" />
         </kbd>
