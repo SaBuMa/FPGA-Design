@@ -63,7 +63,7 @@ The circuits implemented are:
     </a>
 </p>
 
-## Memory
+## [Memory](Memory)
 ### [Single Port RAM](Memory/SinglePortRAM)
 
 <p align="Center">
