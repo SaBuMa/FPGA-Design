@@ -65,11 +65,19 @@ The circuits implemented are:
 
 ## [Memory](Memory)
 ### [Single Port RAM](Memory/SinglePortRAM)
-
 <p align="Center">
     <a href="Memory/SinglePortRAM/readme.md">
         <kbd>
             <img src="Memory/SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Single Port RAM" width="350"/> 
+        </kbd>
+    </a>
+</p>
+
+### [Dual Port RAM](Memory/DualPortRAM)
+<p align="Center">
+    <a href="Memory/DualPortRAM/readme.md">
+        <kbd>
+            <img src="Memory/DualPortRAM/DualPortRAM_Img/DPRAM_Block.svg" alt="Dual Port RAM" width="350"/> 
         </kbd>
     </a>
 </p>
