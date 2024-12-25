@@ -26,3 +26,30 @@
         </kbd>
     </a>
 </p>
+
+## [Dual Port RAM](DualPortRAM) 
+
+<p align="center">
+    <b>  
+        DPRAM Representation  
+    </b>
+</p>
+<p align="Center">
+    <a href="DualPortRAM/readme.md">
+        <kbd>
+            <img src="DualPortRAM/DualPortRAM_Img/DPRAM_Block.svg" alt="Block Dia" width="380" />
+        </kbd>
+    </a>
+</p>
+<p align="center">
+    <b>  
+        DPRAM Configuration  
+    </b>
+</p>
+<p align="Center">
+    <a href="DualPortRAM/readme.md">
+        <kbd>
+            <img src="DualPortRAM/DualPortRAM_Img/DPRAM_CONFIG.png" alt="Representation" width="580" />
+        </kbd>
+    </a>
+</p>
