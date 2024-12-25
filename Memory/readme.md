@@ -1,14 +1,20 @@
-# Multiple Memory projects
+# Memory projects
 
 ## [Single Port RAM](SinglePortRAM) 
+
+<p align="center">
+    <b>  
+        SPRAM Representation  
+    </b>
+</p>
 <p align="Center">
     <kbd>
-        <img src="SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="580" />
+        <img src="SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="380" />
     </kbd>
 </p>
 <p align="center">
     <b>  
-        SPRAM Representation  
+        SPRAM Configuration  
     </b>
 </p>
 <p align="Center">
