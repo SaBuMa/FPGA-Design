@@ -67,7 +67,7 @@ The circuits implemented are:
 ### [Single Port RAM](Memory/SinglePortRAM)
 
 <p align="Center">
-    <a href="SynchronousBinaryCounter/readme.md">
+    <a href="Memory/SinglePortRAM/readme.md">
         <kbd>
             <img src="Memory/SinglePortRAM/SinglePortRAM_Img/SPRAM_Block.svg" alt="Single Port RAM" width="350"/> 
         </kbd>
