@@ -455,7 +455,7 @@ endmodule
 ## Simulation
 <p align="center">
     <b>
-       Simulation Results for Write
+       Simulation Results for Write & Read
     </b>
 </p>
 <p align="center">
