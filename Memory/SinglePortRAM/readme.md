@@ -14,7 +14,7 @@
 </p>
 <p align="Center">
     <kbd>
-        <img src="SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="380" />
+        <img src="SinglePortRAM_Img/SPRAM_Block.svg" alt="Block Dia" width="580" />
     </kbd>
 </p>
 <p align="center">
@@ -103,21 +103,17 @@ ARCHITECTURE rt1 OF SinglePortRAM IS
 
 --******************* Auxiliary cables **********************--
 --***********************************************************--
-	TYPE mem_2d IS ARRAY (0 TO 2**Addr_Width-1) OF STD_LOGIC_VECTOR(Data_Width-1 DOWNTO 0);
-	SIGNAL ram : mem_2d;
-	SIGNAL addr_reg : STD_LOGIC_VECTOR(Addr_Width-1 DOWNTO 0);
--- Cables used in "Module Instantiation"	
 
 -- Cables used in "Module Parameterization"
+	TYPE mem_2d IS ARRAY (0 TO 2**Addr_Width-1) OF STD_LOGIC_VECTOR(Data_Width-1 DOWNTO 0);
+
+	SIGNAL ram : mem_2d := (("00000000"),("00000000"),("00000000"),("00000000")); -- Initializing Memory to zeroes
+
+	SIGNAL addr_reg : STD_LOGIC_VECTOR(Addr_Width-1 DOWNTO 0);
 	
 BEGIN
-
---***************** Module Instantiation ********************--
---***********************************************************--
-
-
-					
---********** Parameterized description of Counter ***********--
+			
+--************* Parameterized description of RAM ************--
 --***********************************************************--
 WriteProcess: PROCESS (clk)
 	BEGIN
@@ -131,7 +127,6 @@ WriteProcess: PROCESS (clk)
 	Data_read <= ram(TO_INTEGER(UNSIGNED(addr_reg)));
 
 END ARCHITECTURE;
-
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL Up RTL
@@ -455,7 +450,7 @@ endmodule
 ## Simulation
 <p align="center">
     <b>
-       Simulation Results for Write & Read
+       Simulation Results for Write  & Read
     </b>
 </p>
 <p align="center">
