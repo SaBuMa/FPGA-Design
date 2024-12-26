@@ -82,7 +82,7 @@ The circuits implemented are:
     </a>
 </p>
 
+### FIFO
 ## FSM
 ## ALU
-## FIFO
-## Majority vote
+
