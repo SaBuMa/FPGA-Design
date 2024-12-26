@@ -1,1 +1,1 @@
-# VHDL Files used in the Single Port RAM Project
+# VHDL Files used in the Dual Port RAM Project
