@@ -130,7 +130,7 @@ WriteProcess: PROCESS (clk)
 END ARCHITECTURE;
 ```
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
-### VHDL Up RTL
+### VHDL RTL
 **1.** This image represent the **Dual Port RAM** being Parameterized
 <p align="center">
     <kbd>
