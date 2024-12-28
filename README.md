@@ -82,7 +82,15 @@ The circuits implemented are:
     </a>
 </p>
 
-### FIFO
+### [FIFO](Memory/FIFO_Buffer)
+<p align="Center">
+    <a href="Memory/FIFO_Buffer/readme.md">
+        <kbd>
+            <img src="Memory/FIFO_Buffer/FIFO_Img/FIFO_Block.svg" alt="FIFO Buffer" width="350"/> 
+        </kbd>
+    </a>
+</p>
+
 ## FSM
 ## ALU
 
