@@ -163,6 +163,11 @@ END ARCHITECTURE arch;
     </kbd>
 </p>
 <p align="center">
+    <kbd>
+        <img src="FIFO_Img/FIFO_VHDL_Enlarged.svg" alt="FIFO_VHDL_Enlarged" width="500"/>  
+    </kbd>
+</p>
+<p align="center">
     <b>
        RTL Parameterized Description
     </b>
