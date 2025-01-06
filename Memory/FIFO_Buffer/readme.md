@@ -64,8 +64,8 @@
   </i>
 </p>
 
-## [VHDL Dual Port RAM](VHDL_Files)
-This project is sub-dived into three (3) files: **[FIFO](#fifo-vhdl), [FIFO_Ctrl](#fifo-control-vhdl)** and **[RegFile](#register-file-vhdl).**  
+## [VHDL FIFO Buffer](VHDL_Files)
+This project is sub-dived into three (3) files: **[FIFO](#fifo-vhdl), [FIFO Ctrl](#fifo-control-vhdl)** and **[RegFile](#register-file-vhdl).**  
 
 These files are the complete FIFO Project
 
@@ -375,7 +375,7 @@ END ARCHITECTURE arch;
 </p>
 
 ## [Verilog Code](Verilog_Files)
-This project is sub-dived into three (3) files: **[FIFO](#fifo-verilog), [FIFO_Ctrl](#fifo-control-verilog)** and **[RegFile](#register-file-verilog).**  
+This project is sub-dived into three (3) files: **[FIFO](#fifo-verilog), [FIFO Ctrl](#fifo-control-verilog)** and **[RegFile](#register-file-verilog).**  
 
 These files are the complete FIFO Project
 
