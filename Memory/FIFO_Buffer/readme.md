@@ -467,7 +467,7 @@ endmodule
 
 ```
 ### Testbench Verilog
-This verilog testbench includes the test vectors that are discused in the [Findings](##Findings (Errors found in simulation)) section
+This verilog testbench includes the test vectors that are discused in the [Findings](#Findings (Errors found in simulation)) section
 ```
 module FIFO_tb
 #(
