@@ -174,9 +174,11 @@ END ARCHITECTURE arch;
 </p>
 
 ## [Verilog Code](Verilog_Files)
-This project is sub-dived into three (3) files: **FIFO, FIFO_Ctrl** and **RegFile.**  
+This project is sub-dived into three (3) files: **[FIFO](#fifo), [FIFO_Ctrl](#fifo-control)** and **[RegFile](#register-file).**  
 
 These files are the complete FIFO Project
+
+### FIFO
 ```
 //*********************** FIFO Buffer ***********************--
 //***********************************************************--
@@ -236,6 +238,7 @@ RegFile register_file(
 				 );
 endmodule 
 ```
+### FIFO Control
 ```
 //********************** FIFO Control ***********************--
 //***********************************************************--
@@ -374,6 +377,7 @@ always @(*)
 // ONE HAS TO INCLUDE THE BEGIN AND END RESERVERD WORDS
 endmodule 
 ```
+### Register File
 ```
 //**************** Register File Buffer FIFO ****************--
 //***********************************************************--
