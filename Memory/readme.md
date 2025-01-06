@@ -53,3 +53,12 @@
         </kbd>
     </a>
 </p>
+
+## [FIFO](FIFO_Buffer)
+<p align="Center">
+    <a href="FIFO_Buffer/readme.md">
+        <kbd>
+            <img src="FIFO_Buffer/FIFO_Img/FIFO_Block.svg" alt="FIFO Buffer" width="350"/> 
+        </kbd>
+    </a>
+</p>
