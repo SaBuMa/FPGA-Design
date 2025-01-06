@@ -467,7 +467,7 @@ endmodule
 
 ```
 ### Testbench Verilog
-This verilog testbench includes the test vectors that are discused in the [Findinds](Findings (Errors found in simulation)) section
+This verilog testbench includes the test vectors that are discused in the [Findings](##Findings (Errors found in simulation)) section
 ```
 module FIFO_tb
 #(
@@ -726,12 +726,22 @@ endmodule
 ## Simulation
 <p align="center">
     <b>
-       Simulation Results for FIFO
+       Simulation Results for FIFO Correct Writing and Reading
     </b>
 </p>
 <p align="center">
     <kbd>
-        <img src="FIFO_Img/FIFO_Simu.png" alt="FIFO_Simu"/>  
+        <img src="FIFO_Img/FIFO_Simu_1.png" alt="FIFO_Simu_1" width="500"/>  
+    </kbd>
+</p>
+<p align="center">
+    <b>
+       Simulation Results for FIFO Correct Writing and Reading
+    </b>
+</p>
+<p align="center">
+    <kbd>
+        <img src="FIFO_Img/FIFO_Simu_2.png" alt="FIFO_Simu_2" width="500"/>  
     </kbd>
 </p>
 
@@ -739,13 +749,13 @@ endmodule
 **1.** This image represent the **FIFO** being Parameterized
 <p align="center">
     <kbd>
-        <img src="FIFO_Img/FIFO_Simu_Findings1.png" alt="FIFO_Simu_Findings1"/>  
+        <img src="FIFO_Img/FIFO_Simu_Findings1.png" alt="FIFO_Simu_Findings1" width="500"/>  
     </kbd>
 </p>
 
 **2.** This image represent the **FIFO** being Parameterized
 <p align="center">
     <kbd>
-        <img src="FIFO_Img/FIFO_Simu_Findings2.png" alt="FIFO_Simu_Findings2"/>  
+        <img src="FIFO_Img/FIFO_Simu_Findings2.png" alt="FIFO_Simu_Findings2" width="500"/>  
     </kbd>
 </p>
