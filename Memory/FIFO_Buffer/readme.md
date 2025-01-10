@@ -4,7 +4,7 @@
  * Then through the use of **Quartus**, the circuit is going to be coded both in **VHDL** and **Verilog** languages.
     * With the use of Quartus one can check the VHDL or Verilog code implementation does in fact recreate the circuit in question looking at the **RTL model** created by Quartus.  
 
-* Finally to verify that the **RAM** is working as expected a **testbench** and simulation in **Questa** is done. 
+* Finally to verify that the **Buffer** is working as expected a **testbench** and simulation in **Questa** is done. 
 
 ## Block Diagrams
 <p align="center">
