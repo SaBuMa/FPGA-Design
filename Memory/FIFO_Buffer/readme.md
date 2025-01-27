@@ -1174,7 +1174,21 @@ endmodule
 </p>
 
 ## Findings (Errors found in simulation)
-**1.** This image represent one issue with the **FIFO** in simulation.
+**1.** This image represent one issue with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
+
+In **Section A :**  
+* the FIFO buffer is performing a **write** operation, it writes a **"0"** to the first position of the buffer. Then, in the next write operation a **"1"** is written in the following position.  
+
+Now, in **Section B :**  
+* A **read** operation is given to the buffer. It is suppoused to read the first position of the buffer, given that it is the first **read** operation in the testbench. But for reasons yet to be found, the first **read** operation returns a **"1"** which was the value written in the second position of the buffer and it is suppoused to return a **"0"** which was the first value written. ***(NOT THE DESIRED OUTCOME)***
+
+Finally, in **Section C :**  
+* The **read** operation is again given to the buffer. And, in this case the buffer follows the expected behavior for about two **read** operations, by outputing the following positions that were written after the second **write** operation. 
+* Nevertheless, after a couple of **read** operations the third one returns an unexpected value by outputing a **0** where a **4** was suppoused to be the right output.
+
+**Performed Fixes**
+* The buffer is tested as stated in the Verilog testbench where the buffer is only issued the **write** operation up until its last position. Then, the **read** operation is performed. This will show the expected outcome from the FIFO buffer 
+
 <p align="center">
     <kbd>
         <img src="FIFO_Img/FIFO_Simu_Findings1.png" alt="FIFO_Simu_Findings1" width="500"/>  
