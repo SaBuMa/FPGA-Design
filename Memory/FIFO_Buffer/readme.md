@@ -891,6 +891,9 @@ Testbench: PROCESS BEGIN
 
 END ARCHITECTURE rt1;
 ```
+<details>
+<summary> <h3>Testbench Verilog </h3> </summary>
+
 ### Testbench Verilog
 This verilog testbench includes the test vectors that are discused in the [Findings](#findings-errors-found-in-simulation) section
 ```
@@ -1151,6 +1154,8 @@ initial begin
 end
 endmodule
 ```
+</details>
+
 ## Simulation
 <p align="center">
     <b>
