@@ -1187,7 +1187,7 @@ Finally, in **Section C :**
 * Nevertheless, after a couple of **read** operations the third one returns an unexpected value by outputing a **0** where a **4** was suppoused to be the right output.
 
 **Performed Fixes**
-* The buffer is tested as stated in the Verilog testbench where the buffer is only issued the **write** operation up until its last position. Then, the **read** operation is performed. This will show the expected outcome from the FIFO buffer 
+* The buffer is tested as stated in the Verilog testbench where the buffer is only issued the **write** operation up until its last position. Then, the **read** operation is performed. This will show the expected outcome from the FIFO buffer. 
 
 <p align="center">
     <kbd>
@@ -1195,7 +1195,16 @@ Finally, in **Section C :**
     </kbd>
 </p>
 
-**2.** This image represent one issue with the **FIFO** in simulation.
+**2.** This image represent the second issue found with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
+
+In **Section A :**  
+* the FIFO buffer starts performing a **write** operation, it writes a **"0"** to the first position of the buffer. Then, a **write** and a **read** operation are performed simultaneously, meaning that the second position of the buffer is being written with a **"1"** and the first position of the buffer is being read which is a **"0"** ***(Section B)***
+
+Now, in **Section B :**  
+* Shows the outputs of the buffer for the first and second position. The first position returns a **"0"** as expected. on the other hand, for the second position of the buffer that was read, the expected value was a **"1"** and in return the buffer outputed a **"2"** which is the corresponding value for the third position of the buffer, as shown in the image below.
+
+**Performed Fixes**
+* The buffer is tested as stated in the Verilog testbench where the buffer is only issued the **write** operation up until its last position. Then, the **read** operation is performed. This will show the expected outcome from the FIFO buffer. 
 <p align="center">
     <kbd>
         <img src="FIFO_Img/FIFO_Simu_Findings2.png" alt="FIFO_Simu_Findings2" width="500"/>  
