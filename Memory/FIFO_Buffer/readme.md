@@ -682,6 +682,9 @@ endmodule
 ## Test Benches
 ### Configuration
 * For the testbench the **Write** and **Read** instructions are implemented
+  
+<details>
+<summary> <h3>Testbench VHDL </h3> </summary>
 
 ### TestBench VHDL
 ```
@@ -891,6 +894,8 @@ Testbench: PROCESS BEGIN
 
 END ARCHITECTURE rt1;
 ```
+</details>
+
 <details>
 <summary> <h3>Testbench Verilog </h3> </summary>
 
