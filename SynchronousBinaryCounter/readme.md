@@ -71,8 +71,11 @@
 </p>
 
 ## [VHDL Up - Down - Up/Down/Load](VHDL_Files)
-### Synchronous Binary Counter Up (VHDL Code)
+### Synchronous Binary Counter Up
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+	
 ```
 --************** Synchronous Binary Counter Up **************--
 --***********************************************************--
@@ -173,6 +176,8 @@ BEGIN
 
 END ARCHITECTURE;
 ```
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL Up RTL
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
@@ -201,6 +206,9 @@ END ARCHITECTURE;
 
 ### Synchronous Binary Counter Down (VHDL Code)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 ```
 --************* Synchronous Binary Counter Down *************--
 --***********************************************************--
@@ -302,6 +310,8 @@ BEGIN
 
 END ARCHITECTURE;
 ```
+</details>
+	
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL Down RTL
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
@@ -330,6 +340,9 @@ END ARCHITECTURE;
 
 ### Synchronous Binary Counter Up/Down/Load (VHDL Code)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 ```
 --********* Synchronous Binary Counter UP/Down/Load *********--
 --***********************************************************--
@@ -471,7 +484,10 @@ BEGIN
 
 END ARCHITECTURE;
 ```
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
+
 ### VHDL Up/Down/Load RTL
 **1.** This first image represent the **Synchronous Binary Counter**  using **D-Type FlipFlops** and **Instantiation**
 <p align="center">
@@ -498,7 +514,10 @@ END ARCHITECTURE;
 </p>
 
 ## [Verilog](Verilog_Files)
-### Synchronous Binary Counter Up Verilog Code
+
+<details>
+<summary> <h3>Synchronous Binary Counter Up Verilog Code</h3> </summary>
+
 ```
 //************** Synchronous Binary Counter Up **************--
 //***********************************************************--
@@ -573,6 +592,8 @@ end
 
 endmodule 
 ```
+</details>
+
 ### Verilog RTL
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
@@ -598,7 +619,11 @@ endmodule
     </b>
 </p>
 
-### Synchronous Binary Counter Down Verilog Code
+
+
+<details>
+<summary> <h3>Synchronous Binary Counter Down Verilog Code</h3> </summary>
+
 ```
 //************* Synchronous Binary Counter Down *************--
 //***********************************************************--
@@ -674,6 +699,8 @@ end
 
 endmodule 
 ```
+</details>
+
 ### Verilog RTL
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
@@ -699,7 +726,9 @@ endmodule
     </b>
 </p>
 
-### Synchronous Binary Counter Up/Down/Load Verilog Code
+<details>
+<summary> <h3>Synchronous Binary Counter Up/Down/Load Verilog Code</h3> </summary>
+
 ```
 //********* Synchronous Binary Counter Up/Down/Load *********--
 //***********************************************************--
@@ -916,6 +945,8 @@ end
 
 endmodule 
 ```
+</details>
+	
 ### Verilog RTL
 **1.** This first image represent the **Binary Counter** in a Gate Level description using **Instantiation**
 <p align="center">
@@ -946,7 +977,9 @@ endmodule
 * For both the Count **Up and Down** counters, the testbench file is the same.
 * For the Count **UpDownLoad** Counter the testbench includes the load function and the count up and down from the load value
 
-### TestBench VHDL Code Up - Down Counters
+<details>
+<summary> <h3>TestBench VHDL Code Up - Down Counters</h3> </summary>
+
 ```
 --******************* LIBRARY DEFINITION ********************--
 --***********************************************************--
@@ -1021,8 +1054,11 @@ signal_generation: PROCESS
 	
 END ARCHITECTURE;
 ```
+</details>
 
-### TestBench VHDL Code UpDownLoad Counter
+<details>
+<summary> <h3>TestBench VHDL Code UpDownLoad Counters</h3> </summary>
+
 ```
 --******************* LIBRARY DEFINITION ********************--
 --***********************************************************--
@@ -1136,8 +1172,13 @@ signal_generation: PROCESS
 	
 END ARCHITECTURE;
 ```
+</details>
+
 ## Testbenches Verilog
-### TestBench Verilog Code Up - Down Counters
+
+<details>
+<summary> <h3>TestBench Verilog Code Up - Down Counters</h3> </summary>
+
 ```
 module SynchBinCount_tb
 #(parameter Nbits = 4 // # of bits to used
@@ -1197,8 +1238,11 @@ initial begin
 end
 endmodule
 ```
+</details>
 
-### TestBench VHDL Code UpDownLoad Counter
+<details>
+<summary> <h3>TestBench Verilog Code UpDownLoad Counter</h3> </summary>
+
 ```
 module SynchBinCountUpDwnLo_tb
 #(parameter Nbits = 4 // # of bits to used
@@ -1294,6 +1338,7 @@ initial begin
 end
 endmodule
 ```
+</details>
 
 ## Simulation
 <p align="center">
