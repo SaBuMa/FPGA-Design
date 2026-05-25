@@ -391,8 +391,9 @@ This project is sub-dived into three (3) files: **[FIFO](#fifo-verilog), [FIFO C
 
 These files are the complete FIFO Project
 
+<details>
+<summary> <h3>FIFO Verilog </h3> </summary>
 
-### FIFO Verilog
 ```
 //*********************** FIFO Buffer ***********************--
 //***********************************************************--
@@ -455,7 +456,10 @@ RegFile register_file(
 				 );
 endmodule 
 ```
-### FIFO Control Verilog
+</details>
+<details>
+<summary> <h3>FIFO Control Verilog </h3> </summary>
+
 ```
 //********************** FIFO Control ***********************--
 //***********************************************************--
@@ -605,7 +609,10 @@ always @(*)
 // ONE HAS TO INCLUDE THE BEGIN AND END RESERVERD WORDS
 endmodule 
 ```
-### Register File Verilog
+</details>
+<details>
+<summary> <h3>Register File Verilog </h3> </summary>
+
 ```
 //**************** Register File Buffer FIFO ****************--
 //***********************************************************--
@@ -673,6 +680,8 @@ always@(rd_ena, r_addr)
 	end	
 endmodule 
 ```
+</details>
+
 ### Verilog RTL
 
 **1.** This image represent the **FIFO** being Parameterized
@@ -912,7 +921,6 @@ END ARCHITECTURE rt1;
 <details>
 <summary> <h3>Testbench Verilog </h3> </summary>
 
-### Testbench Verilog
 This verilog testbench includes the test vectors that are discused in the [Findings](#findings-errors-found-in-simulation) section
 ```
 //************************ Test Bench ***********************--
@@ -1197,7 +1205,7 @@ endmodule
 </p>
 
 ## Findings (Errors found in simulation)
-**1.** This image represent one issue with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
+**1.** The image below represent one issue with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
 
 In **Section A :**  
 * the FIFO buffer is performing a **write** operation, it writes a **"0"** to the first position of the buffer. Then, in the next write operation a **"1"** is written in the following position.  
@@ -1218,7 +1226,7 @@ Finally, in **Section C :**
     </kbd>
 </p>
 
-**2.** This image represent the second issue found with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
+**2.** The image below represent the second issue found with the **FIFO** in simulation and with **Verilog Hardware Description Language**.
 
 In **Section A :**  
 * the FIFO buffer starts performing a **write** operation, it writes a **"0"** to the first position of the buffer. Then, a **write** and a **read** operation are performed simultaneously, meaning that the second position of the buffer is being written with a **"1"** and the first position of the buffer is being read which is a **"0"** ***(Section B)***
