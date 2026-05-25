@@ -76,6 +76,9 @@
 
 ## [VHDL Single Port RAM](VHDL_Files)
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 ```
 --********************* Single Port RAM *********************--
 --***********************************************************--
@@ -128,7 +131,10 @@ WriteProcess: PROCESS (clk)
 
 END ARCHITECTURE;
 ```
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
+	
 ### VHDL RTL
 **1.** This image represent the **Single Port RAM** being Parameterized
 <p align="center">
@@ -142,7 +148,9 @@ END ARCHITECTURE;
     </b>
 </p>
 
-## [Verilog](Verilog_Files)
+<details>
+<summary> <h3>Verilog Code</h3> </summary>
+
 ```
 //********************* Single Port RAM *********************--
 //***********************************************************--
@@ -193,6 +201,8 @@ assign Data_read = ram[addr_reg];
 //Word1/-Value-////-Value-////-Value-////-Value-////
 endmodule 
 ```
+</details>
+
 ### Verilog RTL
 
 **1.** This image represent the **Single Port RAM** being Parameterized
@@ -211,7 +221,9 @@ endmodule
 ### Configuration
 * For the testbench the **Write** and **Read** instructions are implemented
 
-### TestBench VHDL
+<details>
+<summary> <h3>TestBench VHDL</h3> </summary>
+
 ```
 --******************* LIBRARY DEFINITION ********************--
 --***********************************************************--
@@ -334,7 +346,11 @@ signal_generation: PROCESS
 	
 END ARCHITECTURE;
 ```
-### Testbench Verilog
+</details>
+
+<details>
+<summary> <h3>TestBench Verilog</h3> </summary>
+
 ```
 module SinglePortRAM_tb
 #(
@@ -447,6 +463,8 @@ initial begin
 end
 endmodule
 ```
+</details>
+
 ## Simulation
 <p align="center">
     <b>
