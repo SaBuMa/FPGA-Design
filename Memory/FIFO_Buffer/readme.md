@@ -71,7 +71,9 @@ These files are the complete FIFO Project
 
 For the code, **VHDL 2008** was used in order to allow comments using "--" 
 
-### FIFO VHDL
+<details>
+<summary> <h3>FIFO VHDL </h3> </summary>
+	
 ```
 --*********************** FIFO Buffer ***********************--
 --***********************************************************--
@@ -150,7 +152,10 @@ RegisterFile: ENTITY work.RegFile
 		);
 END ARCHITECTURE arch;
 ```
-### FIFO Control VHDL
+</details>
+<details>
+<summary> <h3>FIFO Control VHDL </h3> </summary>
+
 ```
 --********************** FIFO Control ***********************--
 --***********************************************************--
@@ -287,7 +292,10 @@ empty				<= empty_buff;
 
 END ARCHITECTURE functional;
 ```
-### Register File VHDL
+</details>
+<details>
+<summary> <h3>Register File VHDL </h3> </summary>
+
 ```
 --**************** Register File Buffer FIFO ****************--
 --***********************************************************--
@@ -355,7 +363,11 @@ Wr_aux<= (wr_ena AND (NOT full));
 	END PROCESS;
 END ARCHITECTURE arch;
 ```
+
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
+
 ### VHDL RTL
 **1.** This image represent the **FIFO** being Parameterized
 <p align="center">
@@ -378,6 +390,7 @@ END ARCHITECTURE arch;
 This project is sub-dived into three (3) files: **[FIFO](#fifo-verilog), [FIFO Ctrl](#fifo-control-verilog)** and **[RegFile](#register-file-verilog).**  
 
 These files are the complete FIFO Project
+
 
 ### FIFO Verilog
 ```
