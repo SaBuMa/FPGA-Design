@@ -58,7 +58,9 @@ For this scenario, a **Comparator** is being implemented using **logic gates**. 
 </p>
 
 ## [VHDL](VHDL_Files)
-### VHDL Code
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --******************* LIBRARY DEFINITION ********************--
@@ -107,6 +109,8 @@ AeqB		<= e0 XNOR e1;			-- A = B
 
 END ARCHITECTURE behavioral;
 ```
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
 **1.** This first image represent the **Comparator One Bit** in a Gate Level description.
@@ -134,7 +138,9 @@ END ARCHITECTURE behavioral;
 </p>
 
 ## [Verilog](Verilog_Files)
-## Verilog Code
+<details>
+<summary> <h3>Verilog Code</h3> </summary>
+
 ```
 //******************* Comparator One Bit ********************--
 //***********************************************************--
@@ -192,6 +198,8 @@ assign	 AeqB = e0 ~^ e1;
 
 endmodule 
 ```
+</details>
+
 ## Verilog RTL
 **1.** This first image represent the **Comparator One Bit** in a **Gate Level description**.
 <p align="center">
