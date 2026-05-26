@@ -58,7 +58,9 @@ For this scenario, a **Full Adder** is being implemented using **logic gates**. 
 </p>
 
 ## [VHDL](VHDL_Files)
-### VHDL Code
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --******************* LIBRARY DEFINITION ********************--
@@ -108,6 +110,8 @@ e3 <= e1 AND C_in;
 
 END ARCHITECTURE behavioral;
 ```
+</details>
+	
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
 This first image represent the Full Adder One Bit in a Gate Level description
@@ -135,7 +139,9 @@ Now using the library "***USE IEEE.STD_LOGIC_UNSIGNED.ALL;***" one can describe 
 </p>
 
 ## [Verilog](Verilog_Files)
-## Verilog Code
+<details>
+<summary> <h3>Verilog Code</h3> </summary>
+
 ```
 //******************* Full Adder One Bit ********************--
 //***********************************************************--
@@ -182,6 +188,8 @@ assign	 C_out = e3 | e2;
 
 endmodule 
 ```
+</details>
+
 ## Verilog RTL
 This first image represent the Full Adder One Bit in a Gate Level description
 <p align="center">
