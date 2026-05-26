@@ -55,7 +55,10 @@ For this scenario, an **N Bit Comparator** is being implemented using **logic ga
 </p>
 
 ## [VHDL](VHDL_Files)
-### VHDL Code
+
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+	
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --******************* Comparator One Bit ********************--
@@ -169,6 +172,8 @@ AeqB_N  <= AND_REDUCE(e2);
 
 END ARCHITECTURE behavioral;
 ```
+</details>
+
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
 **1.** This first image represent the **Comparator N Bits** in a Gate Level description using **Instantiation**
@@ -208,7 +213,9 @@ END ARCHITECTURE behavioral;
 </p>
 
 ## [Verilog](Verilog_Files)
-## Verilog Code
+<details>
+<summary> <h3>Verilog Code</h3> </summary>
+
 ```
 //******************* Comparator One Bit ********************--
 //***********************************************************--
@@ -290,6 +297,8 @@ assign AeqB_N = & e2;
 	
 endmodule 
 ```
+</details>
+	
 ## Verilog RTL
 **1.** This first image represent the **Comparator N Bits** in a Gate Level description using **Instantiation**
 <p align="center">
