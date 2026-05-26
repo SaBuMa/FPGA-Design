@@ -55,7 +55,9 @@ For this scenario, an **N Bit Full Adder** is being implemented using **logic ga
 </p>
 
 ## [VHDL](VHDL_Files)
-### VHDL Code
+<details>
+<summary> <h3>VHDL Code</h3> </summary>
+
 For the code, **VHDL 2008** was used in order to allow comments using "--"  
 ```
 --******************* LIBRARY DEFINITION ********************--
@@ -159,6 +161,8 @@ Cout <= aux(Nbits);
 	
 END ARCHITECTURE behavioral;
 ```
+</details>
+	
 [comment]: <> (To make a reference to a parent folder, used when the images are within a parent folder od the Readme.md file one must use ".." as represented below)
 ### VHDL RTL
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
@@ -198,7 +202,9 @@ END ARCHITECTURE behavioral;
 </p>
 
 ## [Verilog](Verilog_Files)
-## Verilog Code
+<details>
+<summary> <h3>Verilog Code</h3> </summary>
+
 ```
 //******************* Full Adder N BitS *********************--
 //***********************************************************--
@@ -260,6 +266,8 @@ assign Cout = aux[Nbits];
 
 endmodule  
 ```
+</details>
+	
 ## Verilog RTL
 **1.** This first image represent the Full Adder 4 Bits in a Gate Level description using **Instantiation**
 <p align="center">
